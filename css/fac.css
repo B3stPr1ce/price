@@ -1,0 +1,640 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mainArea.ins .titleBox h2{
+	font-size: 0;
+	width: 230px;
+	height: 50px;
+	background: url(../images/title/title05.png) no-repeat center;
+}
+
+/******類別******/
+	.classNote{
+		text-align: center;
+		width: 100%;
+		height: 340px;
+		background: url(../images/bg_note.jpg) no-repeat top center;
+		padding: 0;
+		margin: 0 0 25px 0;
+	}
+	.classNote::after{
+		width: 168px;
+		height: 172px;
+		background: url(../images/noteCow.png) no-repeat;
+		position: absolute;
+		bottom: 30px;
+		right: 100px;
+		-webkit-animation: noteCow 3s -1s ease infinite;
+		animation: noteCow 3s -1s ease infinite;
+	}
+	.classNote .txtBox{
+		width: 310px;
+		display: inline-block;
+		text-align: center;
+		padding: 60px 10px 0 10px;
+		margin-right: 100px;
+	}
+	.classNote .txtBox::before{
+		width: 643px;
+		height: 319px;
+		background: url(../images/dialogBox.png) no-repeat;
+		position: absolute;
+		top: 10px;
+		left: calc(50% - 280px);
+	}
+	.classNote .txtBox .noteTitle{
+		color: #333;
+		font-size: 30px;
+		font-weight: bold;
+		line-height: 40px;
+		letter-spacing: 4px;
+		margin-bottom: 8px;
+	}
+	.classNote .txtBox p{
+		color: #666;
+		line-height: 28px;
+		max-height: 145px;
+	}
+	.classNote .txtBox .btn{
+		margin-top: 20px;
+	}
+
+/******列表******/
+	ul.itemList{
+		margin: 0 -37px;
+		margin-top: 50px;
+	}
+	ul.itemList li{
+		padding: 0 37px 50px 37px;
+		text-align: center;
+	}
+	ul.itemList li .Img{
+		position: relative;
+		overflow: hidden;
+	}
+	ul.itemList li .Img img{
+		display: block;
+		width: 100%;
+	}
+	ul.itemList li a.imgLink{
+		display: block;
+		margin-bottom: -80px;
+	}
+	ul.itemList li .Txt{
+		width: 100%;
+		max-width: 396px;
+		height: 248px;
+		text-align: center;
+		display: inline-block;
+	}
+	ul.itemList li .Txt .txtBox{
+		width: 100%;
+		height: 100%;
+		background: url(../images/ins/bg_txt.png) no-repeat center;
+		-moz-background-size: 80%;
+		-webkit-background-size: 80%;
+		-o-background-size: 80%;
+		background-size: 80%;
+		padding: 60px 80px 20px;
+		z-index: 5;
+	}
+	ul.itemList li .Txt::before{
+		width: 205px;
+		height: 333px;
+		background: url(../images/ins/fac_hover.png) no-repeat;
+		position: absolute;
+		top: -150px;
+		left: -25px;
+		opacity: 0;
+		-webkit-transition: all 0.4s ease, opacity 0.8s ease;
+		-moz-transition: all 0.4s ease, opacity 0.8s ease;
+		-o-transition: all 0.4s ease, opacity 0.8s ease;
+		transition: all 0.4s ease, opacity 0.8s ease;
+	}
+	ul.itemList li:hover .Txt::before{
+		top: -180px;
+		left: -35px;
+		opacity: 1;
+		-webkit-transition: all 0.8s ease;
+		-moz-transition: all 0.8s ease;
+		-o-transition: all 0.8s ease;
+		transition: all 0.8s ease;
+	}
+	ul.itemList li .Txt h3{
+		font-size: 28px;
+		color: #111;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	ul.itemList li .Txt h3 span{
+		letter-spacing: -1px;
+	}
+	ul.itemList li .Txt p{
+		margin-top: 10px;
+		color: #111;
+		height: 40px;
+		line-height: 30px;
+	}
+	ul.itemList li .Txt .btnListBox{
+		margin-top: 5px;
+	}
+	ul.itemList li .Txt .btnListBox .btn{
+		display: inline-block;
+		margin: 0 -4px;
+	}
+	ul.itemList li .Txt .btnListBox .btn a{
+		width: 85px;
+		height: 35px;
+		line-height: 35px;
+	}
+	ul.itemList li .Txt .btnListBox .btn.btn_ins a{
+		background: #0e6166;
+	}
+		
+/******內頁******/
+	.contentBox{}
+	.contentBox .box{
+		margin-bottom: 25px;
+	}
+	.contentBox .box .Img{
+		z-index: 5;
+	}
+	.contentBox .box .Img img{
+		max-width: 100%;
+	}
+	.contentBox .box .Txt{
+		padding: 50px 30px 0 150px;
+	}
+	.contentBox .box .Txt::before{
+		width: 612px;
+		height: 359px;
+		background: url(../images/ins/room.png) no-repeat;
+		position: absolute;
+		top: -2px;
+		left: -30px;
+	}
+	.contentBox .box .Txt .txtContext{
+		z-index: 6;
+		padding-left: 120px;
+	}
+	.contentBox .box .Txt .title{
+		color: #222;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 30px;
+		letter-spacing: 2px;
+		margin-bottom: 10px;
+	}
+	.contentBox .box .Txt p{
+		color: #666;
+		font-size: 16px;
+		line-height: 30px;
+		letter-spacing: 0.5px;
+		max-height: 125px;
+		min-height: 90px;
+	}
+	.contentBox .box .Txt .smallImg{
+		max-width: 124px;
+		max-height: 124px;
+		position: absolute;
+		top: 0;
+		left: -20px;
+	}
+	.contentBox .box .Txt ul.specBox{
+		width: 405px;
+		margin-top: 20px;
+	}
+	.contentBox .box .Txt ul.specBox li{
+		color: #fff;
+		text-align: center;
+		line-height: 110px;
+		padding: 0 25px 0 17px;
+		display: block;
+		width: 33%;
+		min-width: 120px;
+		height: 120px;
+		background: url(../images/ins/circle.png) no-repeat;
+		font-size: 18px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    float: left;
+	}
+
+	ul.tabContent{
+		padding: 20px 40px 20px 140px;
+	}
+	.textEditor .box{
+		margin-bottom: 60px;
+		padding-left: 30px;
+	}
+	.textEditor .box:last-child{
+		margin-bottom: 0;
+	}
+	.textEditor .title{
+		color: #222;
+		font-size: 24px;
+		line-height: 36px;
+		margin-bottom: 40px;
+		padding-left: 90px;
+	}
+	.textEditor .title::before{
+		width: 160px;
+		height: 64px;
+		background: url(../images/ins/fac_icon.png) no-repeat;
+		position: absolute;
+		top: calc(50% - 25px);
+		left: -75px;
+	}
+	.textEditor .title::after{
+		width: 334px;
+		height: 17px;
+		background: url(../images/ins/line.png) no-repeat;
+		position: absolute;
+		top: 100%;
+		left: 50px;
+	}
+	.textEditor .title span.small{
+		font-size:18px;
+		letter-spacing:0.5px;
+	}
+	.contentBox .btnBox{
+		text-align: center;
+		margin-top: -70px;
+	}
+	.contentBox .btnBox .btn{
+		display: inline-block;
+	}
+	.contentBox .btnBox .btn a{
+	    width: 250px;
+	    height: 70px;
+	    font-size: 18px;
+	    line-height: 70px;
+	    letter-spacing: 2px;
+	}
+	.contentBox .btnBox .btn.btn_booking a{
+		background: #d55032;
+	}
+	.contentBox .btnBox .btn.btn_booking a:hover{
+		background: #8b2c2c;
+	}
+
+/******更多******/
+	.side_info ul li .Txt::before{
+		width: 176px;
+		height: 309px;
+		background: url(../images/ins/fac_hover.png) no-repeat;
+		position: absolute;
+		top: -120px;
+		left: -20px;
+		opacity: 0;
+		-webkit-transition: all 0.4s ease, opacity 0.8s ease;
+		-moz-transition: all 0.4s ease, opacity 0.8s ease;
+		-o-transition: all 0.4s ease, opacity 0.8s ease;
+		transition: all 0.4s ease, opacity 0.8s ease;
+	}
+	.side_info ul li:hover .Txt::before{
+		top: -150px;
+		left: -30px;
+		opacity: 1;
+		-webkit-transition: all 0.8s ease;
+		-moz-transition: all 0.8s ease;
+		-o-transition: all 0.8s ease;
+		transition: all 0.8s ease;
+	}
+
+
+/**********響應式**********/
+@media (max-width: 1180px){
+	/******類別******/
+		.classNote{
+			text-align: right;
+			padding-right: 300px;
+		}
+		.classNote::after{
+			right: 20px;
+		}
+
+	/******內頁******/
+		.contentBox .box{
+			padding-bottom: 70px;
+		}
+		.contentBox .box .Img{
+			float: none;
+			text-align: center;
+		}
+		.contentBox .box .Img img{
+			display: inline-block;
+		}
+		.contentBox .box .Txt{
+			float: none;
+			padding: 0 80px 0 120px;
+			background: url(../images/ins/info_m.png) repeat-y;
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+			margin-top: 90px;
+			margin-bottom: 90px;
+		}
+		.contentBox .box .Txt::before{
+			width: 100%;
+			height: 193px;
+			background: url(../images/ins/info_top.png) no-repeat;
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+			position: absolute;
+			top: -150px;
+			left: 0;
+		}
+		.contentBox .box .Txt::after{
+			width: 100%;
+			height: 168px;
+			background: url(../images/ins/info_bottom.png) no-repeat;
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+			position: absolute;
+			bottom: -150px;
+			left: 0;
+		}
+		.contentBox .box .Txt p{
+			max-height: none;
+		}
+
+		ul.tabContent{
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+		}
+		ul.tabContent::before,
+		ul.tabContent::after{
+			width: 100%;
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+		}
+		ul.tabContent::before{
+			top: -85px;
+		}
+}
+@media (max-width: 1024px){
+	/******內頁******/
+		ul.tabContent{
+			margin: 120px 0;
+		}
+		ul.tabContent::before{
+			top: -80px;
+		}
+}
+@media (max-width: 960px){
+	/******列表******/
+		ul.itemList li{
+			text-align: center;
+		}
+		ul.itemList li .item{
+			width: 100%;
+			max-width: 600px;
+			display: inline-block;
+		}
+
+	/******內頁******/
+		.contentBox .box{
+			padding-bottom: 40px;
+			padding-left: 0;
+		}
+		.contentBox .box .Txt{
+			padding: 0 80px 0 120px;
+			margin-top: 90px;
+			margin-bottom: 90px;
+		}
+		.contentBox .box .Txt::before{
+			height: 130px;
+			top: -130px;
+		}
+		.contentBox .box .Txt::after{
+			height: 168px;
+			bottom: -150px;
+		}
+		.textEditor .title{
+			padding-left: 40px;
+		}
+		.textEditor .title::before{
+			left: -130px;
+		}
+		.textEditor .title::after{
+			left: 35px;
+		}
+		ul.tabContent{
+			padding: 20px 60px 20px 160px;
+		}
+		ul.tabContent::before{
+			top: -75px;
+		}
+}
+@media (max-width: 900px){
+	/******類別******/
+		.classNote{
+			text-align: center;
+			padding-right: 0;
+		}
+		.classNote::after{
+			display: none;
+		}
+
+	/******內頁******/
+		ul.tabContent{
+			margin: 110px 0;
+		}
+		ul.tabContent::before{
+			top: -60px;
+		}
+}
+@media (max-width: 800px){
+	/******列表******/
+		ul.itemList{
+		    margin: 0;
+		}
+
+	/******內頁******/
+		.contentBox .box{
+			padding-bottom: 20px;
+		}
+		.contentBox .box .Txt{
+			margin-top: 90px;
+		}
+		.contentBox .box .Txt::before{
+			height: 110px;
+			top: -110px;
+		}
+}
+@media (max-width: 768px){
+	/******內頁******/
+		.contentBox .box .Txt{
+			margin-top: 80px;
+		}
+		.contentBox .box .Txt::before{
+			height: 110px;
+			top: -95px;
+		}
+		ul.tabContent{
+		    padding: 50px 40px 20px 160px;
+		    margin: 80px 0;
+		}
+		ul.tabContent::before{
+			top: -50px;
+		}
+}
+@media (max-width: 640px){
+	/******類別******/
+		.classNote .txtBox{
+			width: 400px;
+			margin-right: 40px;
+			padding: 75px 10px 0 10px;
+		}
+		.classNote .txtBox::before{
+			width: 560px;
+			top: 30px;
+			left: calc(50% - 230px);
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+		}
+		.classNote .txtBox p{
+			max-height: 115px;
+		}
+
+	/******內頁******/
+		.contentBox .box{
+			padding-bottom: 0;
+		}
+		.contentBox .box .Txt{
+			padding: 20px 50px 0 70px;
+			margin-top: 60px;
+		}
+		.contentBox .box .Txt::before{
+			height: 90px;
+			top: -70px;
+		}
+		.contentBox .box .Txt .txtContext{
+			padding-left: 0;
+		}
+		.contentBox .box .Txt .smallImg{
+			display: none;
+		}
+		ul.tabContent::before{
+			top: -50px;
+		}
+}
+@media (max-width: 480px){
+	/******類別******/
+		.classNote{
+			height: auto;
+			background: transparent;
+			border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+			    margin: 0 0 40px 0;
+		}
+		.classNote .txtBox::before{
+			display: none;
+		}
+		.classNote .txtBox{
+			width: 100%;
+			margin-right: 0;
+			padding: 0 10px 20px 10px;
+		}
+		.classNote .txtBox .noteTitle{
+			display: none;
+		}
+		.classNote .txtBox p{
+			max-height: unset;
+			text-align: left;
+		}
+
+	/******列表******/
+		ul.itemList li{
+			padding: 0 0 30px 0;
+		}
+		ul.itemList li .Txt h3{
+			font-size: 26px;
+		}
+		ul.itemList li .Txt::before{
+			display: none;
+		}
+
+	/******內頁******/
+		.contentBox .box .Txt{
+			margin-top: 40px;
+			margin-bottom: 60px;
+		}
+		.contentBox .box .Txt::before{
+			height: 85px;
+			top: -55px;
+		}
+		ul.tabContent{
+			padding: 50px 40px 40px 60px;
+		}
+		ul.tabContent::before{
+			top: -25px;
+		}
+		.textEditor .title{
+			padding-left: 0;
+		}
+		.textEditor .title::before{
+			display: none;
+		}
+		.textEditor .title::after{
+			width: 100%;
+			left: -10px;
+		}
+		.contentBox .btnBox .btn{
+			width: 45%;
+		}
+		.contentBox .btnBox .btn a{
+			width: 100%;
+		}
+
+
+		.contentBox .box .Txt ul.specBox{
+			width: auto;
+			margin: 20px -40px 0 -40px;
+		}
+		.contentBox .box .Txt ul.specBox li{
+			padding: 0 0 0 8px;
+			min-width: unset;
+			background-position: center;
+		}
+}
+@media (max-width: 360px){
+	/******列表******/
+		ul.itemList li{
+			padding: 0 0 5px 0;
+		}
+		ul.itemList li .Txt .txtBox{
+		    padding: 60px 40px 30px 40px;
+		}
+		ul.itemList li .Txt h3{
+			font-size: 24px;
+		}
+
+	/******內頁******/
+		.contentBox .box .Txt{
+			padding: 15px 20px 10px 40px;
+			margin-bottom: 40px;
+		}
+		.contentBox .box .Txt::before{
+			height: 80px;
+			top: -45px;
+		}
+		ul.tabContent{
+			padding: 50px 20px 40px 30px;
+		}
+}

@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mainArea.ins .titleBox h2{
+	font-size: 0;
+	width: 230px;
+	height: 50px;
+	background: url(../images/title/title04-2.png) no-repeat center;
+}
+
+.textEditor{
+	padding: 20px 10px 10px 160px;
+}
+.textEditor .box{
+	margin-bottom: 60px;
+}
+.textEditor .box:last-child{
+	margin-bottom: 0;
+}
+.textEditor .title{
+	color: #222;
+	font-size: 24px;
+	line-height: 36px;
+	margin-bottom: 40px;
+}
+.textEditor .title::before{
+	width: 120px;
+	height: 94px;
+	background: url(../images/ins/room_icon.png) no-repeat;
+	position: absolute;
+	top: calc(50% - 47px);
+	left: -135px;
+}
+.textEditor .title::after{
+	width: 334px;
+	height: 17px;
+	background: url(../images/ins/line.png) no-repeat;
+	position: absolute;
+	top: 100%;
+	left: -10px;
+}
+.mainArea.ins .textEditor ul{
+    list-style: disc outside;
+}
+
+/**********響應式**********/
+@media (max-width: 480px){
+	.textEditor{
+	    padding: 20px 10px 10px 20px;
+	}
+	.textEditor .title::before{
+		display: none;
+	}
+}

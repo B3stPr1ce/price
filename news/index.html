@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<!--手機解析度-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>最新消息-飛牛牧場</title>
+<meta name="description" content="飛牛牧場">
+
+<!--open graph protocol-->
+<meta property="og:title" content="最新消息-飛牛牧場">
+<meta property="og:image" content="http://www.flyingcow.com.tw/upload/base_fb_img/d76e4f635c47270cf8c4960da41cee70.jpg">
+<meta property="og:site_name" content="飛牛牧場">
+<meta property="og:url" content="http://www.flyingcow.com.tw/news/">
+<meta property="og:type" content="website">
+
+<!--bread script-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+	  {
+		"@type": "ListItem",
+		"position": 1,
+		"item": {
+		  "@id": "http://www.flyingcow.com.tw/",
+		  "name": "首頁"
+			}
+	  },
+	  {
+		"@type": "ListItem",
+		"position": 2,
+		"item": {
+		  "@id": "http://www.flyingcow.com.tw/news/",
+		  "name": "最新消息"
+			}
+	  }  ]
+}
+</script>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../css/master.css">
+<link rel="stylesheet" type="text/css" href="../css/news.css">
+
+<!--ga-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111539364-18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111539364-18');
+</script>
+<!--favor icon-->
+<link rel="shortcut icon" href="../images/touch-icon/touch-icon-iphone.png" />
+
+<!--touch_icon-->
+<link rel="apple-touch-icon" href="../images/touch-icon/touch-icon-iphone.png" /> 
+<link rel="apple-touch-icon" sizes="76x76" href="../images/touch-icon/touch-icon-ipad.png" /> 
+<link rel="apple-touch-icon" sizes="120x120" href="../images/touch-icon/touch-icon-iphone-retina.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="../images/touch-icon/touch-icon-ipad-retina.png" />
+
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>-->
+<script src="../database/function/jquery-1.8.3.min.js"></script>
+<script async src="../database/function/ui/jquery.blockUI.js"></script>
+<script async src="../database/function/ui/jquery.form.js"></script> 
+<script async src="../database/function/ajax_function.js"></script> 
+<script async src="../database/function/script.js"></script>
+<script>
+function open_layer_detail(div_name,width,height){
+	if(width==''){
+		width=0;
+	}
+	if(height==''){
+		height=0;
+	}
+	$.blockUI({
+	message:$('#'+div_name),
+		css:{ 
+		cursor:'default',
+		width: width + 'px',
+		height:height+ 'px',
+		padding:'0px',
+		top:($(window).height()-height)/2 + 'px',
+		left:($(window).width()-width)/2 + 'px'
+		}
+	});		
+}
+function open_loading_status(loading_name){
+	width=$('#'+loading_name).css('width').replace("px","");
+	height=$('#'+loading_name).css('height').replace("px","");
+	$.blockUI({
+	message:$('#'+loading_name),
+		css:{ 
+		cursor:'default',
+		border:'',
+		backgroundColor:'',
+		width: width + 'px',
+		height:height+ 'px',
+		padding:'0px',
+		top:($(window).height()-height)/2 + 'px',
+		left:($(window).width()-width)/2 + 'px'
+		}
+	});
+}
+function close_layer_detail(){
+	$.unblockUI();
+}
+function close_top_layer_detail(){
+	top.$.unblockUI();
+}
+//建立執行的div
+$(function(){
+	$('body').prepend("<span id='iframe_string'></span>");
+	$('body').prepend('<div id="waiting_action" style="display:none;text-align:center;position: absolute;z-index: 99998;color:#FFF;font-size:12px;border:0px;"><img src="../database/function/loading_type/loading_big.gif" hspace="2" align="absmiddle"/><br><img src="../database/function/loading_type/loading_text.png" hspace="2" align="absmiddle"/></div>');
+});
+//end
+</script><script type="text/javascript" src="../Scripts/jqueryui/jquery.ui.core.min.js"></script>
+
+<script>
+	var isMobile = false;
+	var isTablet =false;
+	var isAndroidOS =false;
+	var isiOS =false;
+	var isSafari =false;
+</script>
+
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div class="outerWrap"><!--outerWrap-->     
+    <header><!--header-->
+        <div class="wrap clearfix"><!--wrap-->
+            <h1 class="logo"><a href="../index.html" title="飛牛牧場">飛牛牧場</a></h1>
+            
+            <div class="main_quickLink">
+                <div class="link lang">
+                    <a class="langBtn">Language<i class="fa fa-chevron-down"></i></a>
+                    <div class="submenu">
+                        <a itemprop="url" href="../index.html">繁中</a>
+                        <a itemprop="url" href="../en.html">EN</a>
+                    </div>
+                </div>
+
+                                <div class="link booking"><a href="http://www.booking-wise0.com.tw/flyingcow/hotel/reservation/reservation.php" target="_blank">線上訂房</a></div>
+                
+
+            </div>
+                
+            <nav class="menuBox"><!--menuBox-->
+                <ul class="menu clearfix" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><!--menu-->
+                    <li itemprop="name" class="menuAbout">
+                        <a itemprop="url" href="../about.1.html" title="">關於飛牛</a>
+                        <div class="submenu">
+
+    <a itemprop="url" href="../about/index.php@index_id=1.html">經營理念</a>
+    <a itemprop="url" href="../about/index.php@index_id=3.html">飛牛小檔案</a>
+    <a itemprop="url" href="../about/index.php@index_id=2.html">飛牛小故事</a>
+    
+	<a itemprop="url" href="../album.html">飛牛寫真</a>
+
+<script type="text/javascript">
+    $(function(){
+        $('.menuAbout').addClass('dropDown');
+    });
+</script>           
+</div>                    </li>    
+                    <li itemprop="name" class="menuNews">
+                        <a itemprop="url" href="../en/news/index.php.html" title="">最新消息</a>
+                         
+
+<div class="submenu">
+    <a itemprop="url" href="index.php@index_m_id=1.html">飛牛公告</a>
+
+	<a itemprop="url" href="../en/news/index.php.html">所有消息</a>
+              
+</div>
+
+
+<script type="text/javascript">
+    $(function(){
+        $('.menuNews').addClass('dropDown');
+    });
+</script>
+
+                    </li>
+                    <li itemprop="name" class="menuInformation">
+                        <a itemprop="url" href="../information.1.html" title="">園區資訊</a>
+                        <div class="submenu">
+
+    <a itemprop="url" href="../information/index.php@index_id=1.html">門票資訊</a>
+    <a itemprop="url" href="../information/index.php@index_id=6.html">園區導覽</a>
+    <a itemprop="url" href="../information/index.php@index_id=4.html">交通方式</a>
+    <a itemprop="url" href="../information/index.php@index_id=3.html">入園須知</a>
+    <a itemprop="url" href="../information/index.php@index_id=2.html">匯款資訊</a>
+    
+
+<script type="text/javascript">
+    $(function(){
+        $('.menuInformation').addClass('dropDown');
+    });
+</script>           
+</div>                    </li>
+                    <li itemprop="name" class="dropDown">
+                        <a itemprop="url" href="../en/room/index.php.html" title="">入住飛牛</a>
+                        <div class="submenu">
+                            <a itemprop="url" href="../en/room/index.php.html">房型一覽</a>
+                            <a itemprop="url" href="../room/price.php.html">房價表</a>
+                            <a itemprop="url" href="../booking.html">住宿須知</a>
+                        </div>
+                    </li>
+                    <li itemprop="name" class="menuFac">
+                        <a itemprop="url" href="../en/fac/index.php.html" title="">餐飲會議</a>
+                         
+
+<div class="submenu">
+    <a itemprop="url" href="../fac/index.php@index_m_id=1.html">餐飲設施</a>
+    <a itemprop="url" href="../fac/index.php@index_m_id=2.html">代辦烤肉</a>
+    <a itemprop="url" href="../fac/index.php@index_m_id=3.html">會議場地</a>
+
+	<a itemprop="url" href="../en/fac/index.php.html">所有設施</a>
+              
+</div>
+
+
+<script type="text/javascript">
+    $(function(){
+        $('.menuFac').addClass('dropDown');
+    });
+</script>
+
+                    </li>
+                    <li itemprop="name">
+                        <a itemprop="url" href="../product/index.html" title="">特色產品</a>
+                    </li>
+                    <li itemprop="name" class="menuDiy">
+                        <a itemprop="url" href="../en/diy/index.php.html" title="">牧場體驗</a>
+                         
+
+<div class="submenu">
+    <a itemprop="url" href="../diy/index.php@index_m_id=1.html">DIY活動</a>
+    <a itemprop="url" href="../diy/index.php@index_m_id=2.html">動物農莊</a>
+
+	<a itemprop="url" href="../en/diy/index.php.html">所有活動</a>
+              
+</div>
+
+
+<script type="text/javascript">
+    $(function(){
+        $('.menuDiy').addClass('dropDown');
+    });
+</script>
+
+                    </li>  
+                    <li itemprop="name"><a itemprop="url" href="../faq/index.html" title="">常見問題</a></li>
+                    <li itemprop="name" class="menuIcon"><a itemprop="url" href="../document/index.html" title="檔案下載"><span>檔案下載</span><i class="fa fa-download"></i></a></li>
+                    <li itemprop="name" class="menuIcon"><a itemprop="url" href="../en/academy/index.php.html" title="飛牛學園"><span>飛牛學園</span><i class="fa fa-graduation-cap"></i></a></li>
+                    <li itemprop="name" class="menuIcon"><a itemprop="url" href="../contact/index.html" title="聯絡我們"><span>聯絡我們</span><i class="fa fa-envelope"></i></a></li>
+                	                    	<li itemprop="name" class="menuIcon"><a itemprop="url" href="https://tw.mall.yahoo.com/store/%E9%A3%9B%E7%89%9B%E7%89%A7%E5%A0%B4%EF%BC%8E%E7%89%9B%E5%A5%B6%E7%94%9F%E6%B4%BB%E9%A4%A8:salesflyingcow" target="_blank" title="購物商城"><span>購物商城</span><i class="fa fa-shopping-cart"></i></a></li>
+                	                </ul><!--menu end-->
+            </nav><!--menuBox end-->
+
+        </div><!--wrap end-->
+    </header><!--header end-->  
+	<script>
+        $(function(){
+            $('ul.menu').find('a[href="../news/"]').addClass('current');
+        });
+    </script>
+    <!--main-->
+    <div class="mainArea ins"><!--mainArea-->
+        <div class="wrap"><!--wrap-->
+        
+            <div class="titleBox clearfix"><!--titleBox-->
+                <h2 data-en="News">最新消息</h2>
+                <div class="bread"><!--bread-->
+                    <a href="../en/upload/academy_b/e24a2525d8c022dfcb62ea2e32c5ddab.png.html" title="飛牛牧場"><i class="fa fa-home"></i></a><span>></span>最新消息
+                </div><!--bread end-->
+            </div><!--titleBox end-->
+                        
+            <div class="contentBox clearfix"><!--contentBox-->
+                 
+<div class="classBox"><!--classBox-->
+    <ul class="classLink"><!--classLink-->
+                <li><a href="index.php@index_m_id=1.html"  id="class_current_1">飛牛公告<span class="totalnum">(4)</span></a></li>
+                <li><a href="../en/news/index.php.html"  class="current" id="class_current_0">所有消息</a></li>
+    </ul><!--classLink end-->
+</div><!--classBox end-->
+
+                <h3 class="articleTitle">所有消息</h3>
+
+                
+                <div class="ani_news">
+	<div class="car1"></div>
+	<div class="car2"></div>
+	<div class="car3"></div>
+	<div class="car4"></div>
+	<div class="car5"></div>
+</div>
+
+
+<ul class="itemList clearfix"><!--itemList-->
+
+
+
+<li class="g-d-3 g-4 g-tv-6">
+
+	<div class="item"><!-- item -->
+        <div class="Txt"><!--Txt-->                           
+            <div class="newsDate">
+            	                <div class="newIcon">飛牛公告</div>
+                                <strong>2020/04/29</strong>
+            </div>
+            <h3 class="ellipsis"><a href="ins.php@index_m_id=1&amp;index_id=49.html"  title="你我一起防疫大作戰">你我一起防疫大作戰</a></h3>
+
+            		    <div class="Img"><a href="ins.php@index_m_id=1&amp;index_id=49.html"  title="你我一起防疫大作戰"><img src="../upload/news_list_pic/cb4593ea8a4a1e56d7cd87092981ad5f.jpg"></a></div>
+		                <!-- <p class="ellipsis"></p> -->
+
+            <!-- <div class="btn"><a href="ins.php?index_m_id=1&index_id=49"  title="你我一起防疫大作戰">詳細內容</a></div> -->
+            
+        </div><!--Txt end-->
+	</div><!-- item end -->
+		</li>
+
+
+<li class="g-d-3 g-4 g-tv-6">
+
+	<div class="item"><!-- item -->
+        <div class="Txt"><!--Txt-->                           
+            <div class="newsDate">
+            	                <div class="newIcon">飛牛公告</div>
+                                <strong>2020/04/01</strong>
+            </div>
+            <h3 class="ellipsis"><a href="ins.php@index_m_id=1&amp;index_id=48.html"  title="新型冠狀病毒防疫通知">新型冠狀病毒防疫通知</a></h3>
+
+            		    <div class="Img"><a href="ins.php@index_m_id=1&amp;index_id=48.html"  title="新型冠狀病毒防疫通知"><img src="../upload/news_list_pic/16c439b2d561aee94e289a931a93fea3.jpg"></a></div>
+		                <!-- <p class="ellipsis"></p> -->
+
+            <!-- <div class="btn"><a href="ins.php?index_m_id=1&index_id=48"  title="新型冠狀病毒防疫通知">詳細內容</a></div> -->
+            
+        </div><!--Txt end-->
+	</div><!-- item end -->
+		</li>
+
+
+<li class="g-d-3 g-4 g-tv-6">
+
+	<div class="item"><!-- item -->
+        <div class="Txt"><!--Txt-->                           
+            <div class="newsDate">
+            	                <div class="newIcon">飛牛公告</div>
+                                <strong>2020/02/16</strong>
+            </div>
+            <h3 class="ellipsis"><a href="ins.php@index_m_id=1&amp;index_id=46.html"  title="新冠狀病毒防疫一起來">新冠狀病毒防疫一起來</a></h3>
+
+            		    <div class="Img"><a href="ins.php@index_m_id=1&amp;index_id=46.html"  title="新冠狀病毒防疫一起來"><img src="../upload/news_list_pic/9ef720fcb5bbf22549d1a659ba182c4b.jpg"></a></div>
+		                <!-- <p class="ellipsis"></p> -->
+
+            <!-- <div class="btn"><a href="ins.php?index_m_id=1&index_id=46"  title="新冠狀病毒防疫一起來">詳細內容</a></div> -->
+            
+        </div><!--Txt end-->
+	</div><!-- item end -->
+		</li>
+
+
+<li class="g-d-3 g-4 g-tv-6">
+
+	<div class="item"><!-- item -->
+        <div class="Txt"><!--Txt-->                           
+            <div class="newsDate">
+            	                <div class="newIcon">飛牛公告</div>
+                                <strong>2018/03/14</strong>
+            </div>
+            <h3 class="ellipsis"><a href="ins.php@index_m_id=1&amp;index_id=2.html"  title="飛牛熱銷乳製品銷售據點">飛牛熱銷乳製品銷售據點</a></h3>
+
+            		    <div class="Img"><a href="ins.php@index_m_id=1&amp;index_id=2.html"  title="飛牛熱銷乳製品銷售據點"><img src="../upload/news_list_pic/8cebcdbb5b030153256454afa08f200d.jpg"></a></div>
+		                <!-- <p class="ellipsis">用天然醞釀的力量，因為我們有一座自然的牧場，我們才能產出一瓶好喝的鮮奶，因為單純的配方才能製作出對身體最好的乳製品。</p> -->
+
+            <!-- <div class="btn"><a href="ins.php?index_m_id=1&index_id=2"  title="飛牛熱銷乳製品銷售據點">詳細內容</a></div> -->
+            
+        </div><!--Txt end-->
+	</div><!-- item end -->
+		</li>
+</ul><!--itemList end-->
+            </div><!--contentBox end-->
+            
+    	</div><!--wrap end-->
+    </div><!--mainArea end-->
+
+    <!--banner-->
+    <div class="bannerAreaIns"><!--bannnerArea-->
+        <div class="wrap">
+            <div class="bannerBox"><!--bannerBox-->
+                <div class="cloud"></div>
+                <div class="car"></div>
+            </div><!--bannerBox end-->
+        </div>
+    </div><!--bannerArea end-->
+
+    <footer><!--footer-->
+        <div class="wrap clearfix"><!--wrap-->
+            <div class="linkBox">
+
+<ul class="linkList clearfix">
+
+    
+    <li><!--data-->
+        <div class="item">
+            <div class="Img"><a href="https://www.mlshb.gov.tw/tc/index.aspx"  target='_blank'  ><h2>苗栗縣政府衛生局</h2><img src="../upload/marqueepic_list/63d8f86094ed6303c00bed20ee3e9827.png" alt="苗栗縣政府衛生局"></a></div>
+    	</div>
+    </li><!--data-->
+		    
+    <li><!--data-->
+        <div class="item">
+            <div class="Img"><a href="http://www.taiwanfarm.org.tw/"  target='_blank'  ><h2>台灣休閒農業發展協會</h2><img src="../upload/marqueepic_list/de05afc07ebccf6b8d8671155f6242be.png" alt="台灣休閒農業發展協會"></a></div>
+    	</div>
+    </li><!--data-->
+		    
+    <li><!--data-->
+        <div class="item">
+            <div class="Img"><a href="http://www.mlc.gov.tw/"  target='_blank'  ><h2>苗栗縣政府文化觀光局</h2><img src="../upload/marqueepic_list/7fab6ae701a8eef824bbc3e8a1c59774.png" alt="苗栗縣政府文化觀光局"></a></div>
+    	</div>
+    </li><!--data-->
+		    
+    <li><!--data-->
+        <div class="item">
+            <div class="Img"><a href="http://www.bocca.co.jp/"  target='_blank'  ><h2>日本北海道牧家牧場</h2><img src="../upload/marqueepic_list/2f9ad9a1177eb6fdc9866078814ab212.png" alt="日本北海道牧家牧場"></a></div>
+    	</div>
+    </li><!--data-->
+		    
+    <li><!--data-->
+        <div class="item">
+            <div class="Img"><a href="http://miaolitravel.net/"  target='_blank'  ><h2>苗栗縣觀光旅遊網</h2><img src="../upload/marqueepic_list/0b6861a97c8e17f3149348c7fdd3fb26.png" alt="苗栗縣觀光旅遊網"></a></div>
+    	</div>
+    </li><!--data-->
+		</ul>
+</div>            <div class="downLogo"><!-- downLogo -->
+	<a href="../index.html" title="飛牛牧場">
+		<img src="../images/logo_m.png" alt="飛牛牧場">
+	</a>
+</div><!-- downLogo end-->
+
+<div class="info"><!-- info -->
+			<div class="Txt"><a href="https://maps.google.com.tw/?q=24.441321,120.741310" target="_blank">地　　址<span>|</span><b>35750苗栗縣通霄鎮南和里166號</b></a></div>
+				<div class="Txt"><a href="tel:037-782999">電　　話<span>|</span><b>037-782999</b></a></div>
+				<div class="Txt"><a href="tel:037-782946">訂貨專線<span>|</span><b>037-782946</b></a></div>
+				<div class="Txt">傳　　真<span>|</span>037-782399</div>
+				<div class="Txt"><a href="mailto:service@flyingcow.com.tw">客服信箱<span>|</span><b>service@flyingcow.com.tw</b></a></div>
+	</div><!-- info end-->
+
+<div class="copyright"><!-- copyright -->
+			<div class="Txt">營業時間<span>|</span>07：00 ~ 19：00</div>
+	
+    <div class="endArea"><!--endArea-->
+		Copyright © Flying Cow Ranch <br />
+All Rights Reserved.        <!--↓靜態-ibest-->
+			<div class="translateIbest"><!--translate&ibest-->      
+			    <div class="design clearfix">
+				    <a href="https://www.ibest.com.tw" class="ibestlink" target="_blank" title="Design by iBest">網站設計‧</a>
+			        <a href="https://www.ibest.tw" class="ibestlink" target="_blank" title="iBest">iBest</a>
+			    </div>
+			</div><!--translate&ibest end-->
+    </div><!--endArea end-->
+    
+			<div class="Txt">瀏覽人次<span>|</span>4868158</div>
+	
+</div><!-- copyright end-->
+
+<!-- 點閱次數增加 -->
+<!-- 點閱次數增加:end -->
+	
+<div class="share"><!-- share -->
+			<a href="https://www.facebook.com/flyingcowofficial" target="_blank" title="FB粉絲頁"><i class="fa fa-facebook"></i></a>
+				<a class="getImg" href="http://k037782399.pixnet.net/blog" target="_blank" title="痞客邦"><img src="../images/pixnet.png"></a>
+				<a href="https://tw.mall.yahoo.com/store/%E9%A3%9B%E7%89%9B%E7%89%A7%E5%A0%B4%EF%BC%8E%E7%89%9B%E5%A5%B6%E7%94%9F%E6%B4%BB%E9%A4%A8:salesflyingcow" target="_blank" title="購物商城"><i class="fa fa-shopping-cart"></i></a>
+	</div><!-- share end-->        </div><!--wrap end-->
+    </footer><!--footer end-->
+
+</div><!--outerWrap end-->
+
+<!--mobile menu 手機板選單-->
+<div class="m_menu clearfix"><!--m_menu-->
+    
+    <div class="mask"></div>
+    
+    <div class="controlBox clearfix"><!--controlBox-->    
+
+        <a class="main"><div class="mm"></div></a>
+        
+        <!-- 快速按鈕 -->
+        <div class="main_quickLink_box"></div>
+
+        <div class="m_logo"><a href="../index.html"><img src="../images/logo.png"></a></div>
+
+    </div><!--controlBox end-->
+    
+    <div class="hideBox"><!--hideBox-->
+        
+        <p class="sp">CONTACT</p>
+        <div class="mfun"><!--mfun-->
+
+                                <div class="link"><a href="http://www.booking-wise0.com.tw/flyingcow/hotel/reservation/reservation.php" target="_blank">線上訂房</a></div>
+                
+
+            <a href="https://www.google.com.tw/maps/place/%E9%A3%9B%E7%89%9B%E7%89%A7%E5%A0%B4/@24.4415662,120.7423476,18z/data=!4m5!3m4!1s0x3469063bbf90c617:0x56b7f586bbfe01bf!8m2!3d24.441267!4d120.741294" target="_blank"><i class="fa fa-map-marker"></i></a>                      
+                        <a href="tel:037-782999"><i class="fa fa-phone"></i></a>
+                                    <a href="mailto:service@flyingcow.com.tw"><i class="fa fa-envelope"></i></a>
+                                        <a href="https://www.facebook.com/flyingcowofficial" target="_blank"><i class="fa fa-facebook"></i></a>
+                                        <a href="http://k037782399.pixnet.net/blog" target="_blank">痞</a>
+                    	            	<a href="https://tw.mall.yahoo.com/store/%E9%A3%9B%E7%89%9B%E7%89%A7%E5%A0%B4%EF%BC%8E%E7%89%9B%E5%A5%B6%E7%94%9F%E6%B4%BB%E9%A4%A8:salesflyingcow" target="_blank"><i class="fa fa-shopping-cart"></i></a>
+        	            <a href="../en.html">EN</a>
+
+        </div><!--mfun end-->
+        <p class="sp sp_menu">MENU</p>    
+    </div><!--hideBox end-->
+
+    <div class="down clearfix"><!--down-->
+        <a href="https://www.google.com.tw/maps/place/%E9%A3%9B%E7%89%9B%E7%89%A7%E5%A0%B4/@24.4415662,120.7423476,18z/data=!4m5!3m4!1s0x3469063bbf90c617:0x56b7f586bbfe01bf!8m2!3d24.441267!4d120.741294" target="_blank"><i class="fa fa-map" aria-hidden="true"></i><span>交通導覽</span></a>
+        <a href="diy.html"><i class="fa fa-bullhorn"></i><span>牧場體驗</span></a>
+        <a href="mailto:service@flyingcow.com.tw"><i class="fa fa-envelope"></i><span>客服信箱</span></a>
+        <a href="http://www.booking-wise0.com.tw/flyingcow/hotel/reservation/reservation.php" target="_blank"><i class="fa fa-bell"></i><span>線上訂房</span></a>
+        <a href="https://tw.mall.yahoo.com/store/%E9%A3%9B%E7%89%9B%E7%89%A7%E5%A0%B4%EF%BC%8E%E7%89%9B%E5%A5%B6%E7%94%9F%E6%B4%BB%E9%A4%A8:salesflyingcow" target="_blank"><i class="fa fa-shopping-cart"></i><span>線上購物</span></a>
+    </div>
+</div><!--m_menu end-->
+
+<div class="goTopBox"><!--goTopBox-->
+    <a href="../en/news/index.php.html#" class="goTop"></a>
+</div><!--goTopBox end-->
+
+	<div class="float_shoppingcar"><a href="https://tw.mall.yahoo.com/store/%E9%A3%9B%E7%89%9B%E7%89%A7%E5%A0%B4%EF%BC%8E%E7%89%9B%E5%A5%B6%E7%94%9F%E6%B4%BB%E9%A4%A8:salesflyingcow" target="_blank"><span>線上購物</span></a></div>
+
+
+<!--general Js-->
+<script type="text/javascript" src="../Scripts/jsManage.js"></script>
+<!--customer Js-->
+<script type="text/javascript">
+    $(function(){
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 800){
+                // $('.goTopBox').css("opacity",1);
+                $('.goTopBox').addClass('active');
+            }else{
+                // $('.goTopBox').css("opacity",0);
+                $('.goTopBox').removeClass('active');
+            }
+        });
+
+        $('.m_menu').find('a.main').click(function(){
+            if(!$(this).hasClass('active')){
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');              
+            }        
+        });
+    });
+</script>
+
+<!--fancyBox-->
+<link rel="stylesheet" href="../Scripts/fancybox/dist/jquery.fancybox.css">
+<script src="../Scripts/fancybox/dist/jquery.fancybox.min.js"></script>
+<script>
+    $(function() {
+        $('.titan-lb').fancybox({
+            thumbs : {
+                showOnStart : true
+            },
+            hash     : true
+        });
+    })
+</script>
+
+<!-- slick -->
+<link rel="stylesheet" href="../Scripts/slick-slider/slick-theme.css">
+<link rel="stylesheet" href="../Scripts/slick-slider/slick.css">
+<script src="../Scripts/slick-slider/slick.min.js"></script>
+<script>
+    $(function() {
+        $(".aboutList").slick({
+            infinite: true,
+            dots: false,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            swipe: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            speed: 3000,
+            cssEase: 'ease-in-out',
+            responsive: [
+            {
+                breakpoint: 1701,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 1301,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 901,
+                settings: {
+                    cssEase: 'linear',
+                    autoplaySpeed: 2000,
+                    speed: 400,
+                    slidesToShow: 1
+                }
+            }
+            ]
+        });
+        $(".informationList").slick({
+            infinite: true,
+            dots: false,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            swipe: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            speed: 3000,
+            cssEase: 'ease-in-out',
+            responsive: [
+            {
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    cssEase: 'linear',
+                    autoplaySpeed: 2000,
+                    speed: 400,
+                    slidesToShow: 1
+                }
+            }
+            ]
+        });
+        $(".side_album").slick({
+            infinite: true,
+            dots: false,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            swipe: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            speed: 3000,
+            cssEase: 'ease-in-out',
+            responsive: [
+            {
+                breakpoint: 961,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    cssEase: 'linear',
+                    autoplaySpeed: 2000,
+                    speed: 400,
+                    slidesToShow: 1
+                }
+            }
+            ]
+        });
+        $(".side_info_list").slick({
+            infinite: true,
+            dots: false,
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            swipe: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            speed: 3000,
+            cssEase: 'ease-in-out',
+            responsive: [
+            {
+                breakpoint: 961,
+                settings: {
+                    cssEase: 'linear',
+                    autoplaySpeed: 2000,
+                    speed: 400,
+                    slidesToShow: 1
+                }
+            }
+            ]
+        });
+        $(".side_news_list").slick({
+            infinite: true,
+            dots: false,
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            swipe: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            speed: 3000,
+            cssEase: 'ease-in-out',
+            responsive: [
+            {
+                breakpoint: 961,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 641,
+                settings: {
+                    cssEase: 'linear',
+                    autoplaySpeed: 2000,
+                    speed: 400,
+                    slidesToShow: 1
+                }
+            }
+            ]
+        });
+
+        $(".linkList").slick({
+            infinite: true,
+            dots: false,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            swipe: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            speed: 3000,
+            cssEase: 'ease',
+            responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    autoplaySpeed: 2000,
+                    speed: 1000,
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    cssEase: 'linear',
+                    autoplaySpeed: 2000,
+                    speed: 400,
+                    slidesToShow: 1
+                }
+            }
+            ]
+        });
+    });
+</script>
+
+<!--footable-->
+<link rel="stylesheet" type="text/css" href="../Scripts/footable/css/footable.core.css">
+<script src="../Scripts/footable/footable.js"></script>
+<script>
+    $('table.responsive').footable();
+</script>
+
+<script src="../Scripts/scrollreveal.min.js"></script>
+<script>
+    $(function(){
+
+        window.sr = ScrollReveal({mobile:false, scale:1, duration:800, easing:'linear'});
+
+        if (sr.isSupported()) {
+
+            document.documentElement.classList.add('sr');
+
+        }
+
+    });
+    $(function(){
+        sr.reveal('footer .wrap',{origin:"bottom",distance:"5px",delay:"0",viewFactor:0.1});
+    });
+</script>
+
+<script src="../Scripts/scrollReveal/scrollReveal.js"></script>
+<script src="../Scripts/scrollReveal/TweenMax.min.js"></script>
+<script src="../Scripts/scrollReveal/ScrollToPlugin.min.js"></script>
+<script>
+    $(function(){
+        var config = {
+            reset:  false,
+            mobile: false,
+            delay:  'onload'
+          }
+        window.sr = new scrollReveal(config);
+    });
+</script>
+<script>
+    $(function(){
+        var $window = $(window);        //Window object
+        var scrollTime = 0.7;           //Scroll time
+        var scrollDistance = 300;       //Distance. Use smaller value for shorter scroll and greater value for longer scroll
+            
+        $window.on("mousewheel DOMMouseScroll", function(event){
+            
+            event.preventDefault(); 
+                                            
+            var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+            var scrollTop = $window.scrollTop();
+            var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+                
+            TweenMax.to($window, scrollTime, {
+                scrollTo : { y: finalScroll, autoKill:true },
+                    ease: Power1.easeOut,   //For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+                    autoKill: true,
+                    overwrite: 5                            
+                });  
+        });
+    });
+</script>
+
+<!--dotdot-->
+<script type="text/javascript" src="../Scripts/jquery.dotdotdot.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ellipsis').dotdotdot({
+             wrap: 'letter',
+             remove: [ ' ', ',', ';', '.', '!', '?' ]
+        });
+    });
+</script>	    
+<!--customer Js-->
+
+<script>
+$(function(){
+	$('.item').click(function(){
+		if($(this).hasClass('hasVideo') && isMobile==true){
+			var href= $(this).siblings().find('a').attr('href');
+			window.open(href);
+		}else if($(this).hasClass('hasVideo') && isMobile==false){
+			$(this).siblings().find('a').eq(0).click();
+		}else if($(this).hasClass('hasAlbum')){
+			$(this).siblings().find('a').eq(0).click();
+		}
+	});
+});
+</script>
+<script type="text/javascript">
+	$(window).load(function(){
+		//room
+        $('#room_slide').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,            
+            cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)'
+        });
+	});
+</script> 
+</body>
+</html>

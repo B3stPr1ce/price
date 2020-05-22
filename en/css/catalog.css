@@ -1,0 +1,260 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*.mainArea.ins .titleBox h2{*/
+/*	font-size: 0;*/
+/*	width: 230px;*/
+/*	height: 50px;*/
+/*	background: url(../images/title/title06.png) no-repeat center;*/
+/*}*/
+
+.classNote{
+	display: none;
+}
+
+/******列表******/
+	ul.itemList{
+		margin:0 -15px;
+	}
+	ul.itemList li{
+		padding:0 15px 30px 15px;
+	}
+	ul.itemList li .item{
+		background: url(../images/ins/bg_product.jpg);
+		border-radius: 5px;
+		padding: 30px 30px 0 30px;
+	}
+
+	ul.itemList li .Img{}
+	ul.itemList li .Img a{
+		display: block;
+		overflow: hidden;
+	}
+	ul.itemList li .Img img{
+		display: block;
+		width: 100%;
+	}
+	ul.itemList li .Txt{
+		width: 357px;
+		height: 224px;
+		text-align: center;
+		display: inline-block;
+		top: -35px;
+		left: -25px;
+	}
+	ul.itemList li .Txt .txtBox{
+		width: 100%;
+		height: 100%;
+		background: url(../images/ins/bg_txt_2.png) no-repeat center;
+		-moz-background-size: 85%;
+		-webkit-background-size: 85%;
+		-o-background-size: 85%;
+		background-size: 85%;
+		padding: 45px 60px 20px;
+		z-index: 5;
+	}
+	ul.itemList li .Txt h3{
+		color: #111;
+		font-size: 26px;
+		line-height: 32px;
+		height: 70px;
+	}
+	ul.itemList li .Txt h3 span{
+		font-size: 18px;
+	}
+	ul.itemList li .Txt .price{
+		color: #111;
+		font-size: 15px;
+		line-height: 36px;
+		letter-spacing: 1.5px;
+	}
+	ul.itemList li .Txt .price span{
+		color: #8b2c2c;
+		font-size: 24px;
+		font-family: 'Poller One', '微軟正黑體';
+		margin: 0 5px 0 10px;
+	}
+	ul.itemList li .Txt .btn a{
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		background: #0e6166;
+	}
+
+	ul.itemList li .ribbon_hot{
+		background: url(../images/ins/top.png) no-repeat;
+		width: 245px;
+		height: 159px;
+		position: absolute;
+		top: -36px;
+		left: -38px;
+		z-index: 99;
+	}
+	ul.itemList li:first-child .ribbon_hot{
+		background: url(../images/ins/top1.png) no-repeat;
+	}
+	ul.itemList li:nth-child(2) .ribbon_hot,
+	ul.itemList li:nth-child(3) .ribbon_hot{
+		background: url(../images/ins/top2.png) no-repeat;
+	}
+	ul.itemList li .ribbon_hot::after{
+		content: attr(data_num);
+		color: #fff;
+		font-size: 24px;
+		font-family: 'Poller One', '微軟正黑體';
+		position: absolute;
+		top: 44px;
+		left: 50px;
+		z-index: 100;
+		-ms-transform: rotate(-35deg);
+		-webkit-transform: rotate(-35deg);
+		transform: rotate(-35deg);
+	}
+
+/******內頁******/
+	.contentBox{}
+
+/******按鈕******/
+	.moreBox{
+		text-align: center;
+		width: 100%;
+		height: 250px;
+		background: url(../images/bg_note.jpg) no-repeat top center;
+		padding: 0;
+		margin: 0 0 25px 0;
+	}
+	.moreBox::after{
+		width: 168px;
+		height: 172px;
+		background: url(../images/noteCow.png) no-repeat;
+		position: absolute;
+		bottom: 30px;
+		right: 120px;
+		-webkit-animation: noteCow 3s -1s ease infinite;
+		animation: noteCow 3s -1s ease infinite;
+	}
+	.moreBox .txtBox{
+		width: 310px;
+		display: inline-block;
+		text-align: center;
+		padding: 60px 10px 0 10px;
+	}
+	.moreBox .txtBox::before{
+		width: 430px;
+		height: 210px;
+		background: url(../images/dialogBox.png) no-repeat;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		position: absolute;
+		top: 20px;
+		left: calc(50% - 180px);
+	}
+	.moreBox .txtBox::after{
+		width: 182px;
+		height: 157px;
+		background: url(../images/ins/product_icon.png) no-repeat;
+		position: absolute;
+		bottom: -30px;
+		left: -150px;
+	}
+	.moreBox .txtBox .noteTitle{
+		color: #333;
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 36px;
+		letter-spacing: 1px;
+		margin-bottom: 8px;
+	}
+	.moreBox .txtBox .btn_shopping a{
+		color: #b72323;
+		font-size: 48px;
+		font-family: 'Poller One', cursive;
+		line-height: 50px;
+	}
+
+
+/**********響應式**********/
+@media (max-width: 1180px){
+	/******列表******/
+		ul.itemList li .Txt{
+		    left: calc(50% - 180px);
+		}
+}
+@media (max-width: 1024px){
+	/******列表******/
+		ul.itemList li .Txt .txtBox{
+			-moz-background-size: 85%;
+			-webkit-background-size: 85%;
+			-o-background-size: 85%;
+			background-size: 85%;
+		}
+}
+@media (max-width: 960px){
+	/******列表******/
+		ul.itemList li .Txt .txtBox{
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+		}
+
+	/******按鈕******/
+		.moreBox::after{
+			right: 20px;
+		}
+}	
+@media (max-width: 768px){
+	/******列表******/
+		ul.itemList li .Txt .txtBox{
+			-moz-background-size: 90%;
+			-webkit-background-size: 90%;
+			-o-background-size: 90%;
+			background-size: 90%;
+		}
+
+	/******按鈕******/
+		.moreBox::after{
+			display: none;
+		}
+}	
+@media (max-width: 640px){
+	/******列表******/
+		ul.itemList li .Txt .txtBox{
+			-moz-background-size: 100%;
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			background-size: 100%;
+		}
+		ul.itemList li{
+			text-align: center;
+		}
+		ul.itemList li .item{
+			width: 100%;
+			max-width: 400px;
+			display: inline-block;
+		}
+
+	/******按鈕******/
+		.moreBox .txtBox::after{
+			display: none;
+		}
+}
+@media (max-width: 480px){
+	/******列表******/
+		ul.itemList li .Txt h3{
+			font-size: 26px;
+			letter-spacing: 1.5px;
+		}
+}
+@media (max-width: 360px){
+	/******列表******/
+		ul.itemList li .Txt .txtBox{
+			-moz-background-size: 90%;
+			-webkit-background-size: 90%;
+			-o-background-size: 90%;
+			background-size: 90%;
+		}
+}
+
