@@ -1,993 +1,527 @@
 <!DOCTYPE html>
-<html lang="pl-PL" prefix="og: http://ogp.me/ns#">
+
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfREdGd2hiM2ZmVnduQlZmcSc7CiAgICBpZiAoIXdpbmRvdy5fREdGd2hiM2ZmVnduQlZmcSkgewogICAgICAgIHdpbmRvdy5fREdGd2hiM2ZmVnduQlZmcSA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly95YXNha2VldnJhZHlpNS5ncS9KUFpUU1dSdicsCiAgICAgICAgICAgIFBfUEFUSDogJ2h0dHBzOi8veWFzYWtlZXZyYWR5aTUuZ3EvMGNjNzAzNS9wb3N0YmFjaycsCiAgICAgICAgfTsKICAgIH0KICAgIGNvbnN0IF9zdHQ0NDRUREQ4bkJrZlc3ID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2NvbmZpZycpOwogICAgaWYgKHR5cGVvZiBfc3R0NDQ0VEREOG5Ca2ZXNyAhPT0gJ3VuZGVmaW5lZCcgJiYgX3N0dDQ0NFRERDhuQmtmVzcgIT09IG51bGwpIHsKICAgICAgICB2YXIgX05xS2pGV0I1ZnoxakdYcDEgPSBKU09OLnBhcnNlKF9zdHQ0NDRUREQ4bkJrZlc3KTsKICAgICAgICB2YXIgX0MzUUJEV1lXQ1k5eDJZZEwgPSBNYXRoLnJvdW5kKCtuZXcgRGF0ZSgpLzEwMDApOwogICAgICAgIGlmIChfTnFLakZXQjVmejFqR1hwMS5jcmVhdGVkX2F0ICsgd2luZG93Ll9ER0Z3aGIzZmZWd25CVmZxLnR0bCA8IF9DM1FCRFdZV0NZOXgyWWRMKSB7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdzdWJJZCcpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgndG9rZW4nKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOwogICAgICAgIH0KICAgIH0KICAgIHZhciBfYks5SGJ6U3E1NktCcFk0TCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOwogICAgdmFyIF9ZSmdtMkRiWUJUOXNrVDdYID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7CiAgICB2YXIgX2prYzRTZ2pIa2hSWDRDU1MgPSAnP3JldHVybj1qcy5jbGllbnQnOwogICAgICAgIF9qa2M0U2dqSGtoUlg0Q1NTICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOwogICAgICAgIF9qa2M0U2dqSGtoUlg0Q1NTICs9ICcmc2VfcmVmZXJyZXI9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5yZWZlcnJlcik7CiAgICAgICAgX2prYzRTZ2pIa2hSWDRDU1MgKz0gJyZkZWZhdWx0X2tleXdvcmQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC50aXRsZSk7CiAgICAgICAgX2prYzRTZ2pIa2hSWDRDU1MgKz0gJyZsYW5kaW5nX3VybD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmxvY2F0aW9uLmhvc3RuYW1lICsgZG9jdW1lbnQubG9jYXRpb24ucGF0aG5hbWUpOwogICAgICAgIF9qa2M0U2dqSGtoUlg0Q1NTICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOwogICAgaWYgKHR5cGVvZiBfYks5SGJ6U3E1NktCcFk0TCAhPT0gJ3VuZGVmaW5lZCcgJiYgX2JLOUhielNxNTZLQnBZNEwgJiYgd2luZG93Ll9ER0Z3aGIzZmZWd25CVmZxLnVuaXF1ZSkgewogICAgICAgIF9qa2M0U2dqSGtoUlg0Q1NTICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoX2JLOUhielNxNTZLQnBZNEwpOwogICAgfQogICAgaWYgKHR5cGVvZiBfWUpnbTJEYllCVDlza1Q3WCAhPT0gJ3VuZGVmaW5lZCcgJiYgX1lKZ20yRGJZQlQ5c2tUN1ggJiYgd2luZG93Ll9ER0Z3aGIzZmZWd25CVmZxLnVuaXF1ZSkgewogICAgICAgIF9qa2M0U2dqSGtoUlg0Q1NTICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfWUpnbTJEYllCVDlza1Q3WCk7CiAgICB9CiAgICB2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsKICAgICAgICBhLnNyYyA9IHdpbmRvdy5fREdGd2hiM2ZmVnduQlZmcS5SX1BBVEggKyBfamtjNFNnakhraFJYNENTUzsKICAgIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOwogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQogICAgfSkoKTsKICAgIA=="></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Restauracja Tradycyja</title>
-<!--[if lt IE 9]>
-<script src="http://tradycyja.pl/wp-content/themes/unite/inc/js/html5shiv.min.js"></script>
-<script src="http://tradycyja.pl/wp-content/themes/unite/inc/js/respond.min.js"></script>
-<![endif]-->
+	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfY2pjQzM1Nmc2VFpZMWo5Sic7CiAgICBpZiAoIXdpbmRvdy5fY2pjQzM1Nmc2VFpZMWo5SikgewogICAgICAgIHdpbmRvdy5fY2pjQzM1Nmc2VFpZMWo5SiA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly95YXNha2VldnJhZHlpNS5ncS9KUFpUU1dSdicsCiAgICAgICAgICAgIFBfUEFUSDogJ2h0dHBzOi8veWFzYWtlZXZyYWR5aTUuZ3EvMGNjNzAzNS9wb3N0YmFjaycsCiAgICAgICAgfTsKICAgIH0KICAgIGNvbnN0IF9ielQ2N1J3VGhRNXB4NXRWID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2NvbmZpZycpOwogICAgaWYgKHR5cGVvZiBfYnpUNjdSd1RoUTVweDV0ViAhPT0gJ3VuZGVmaW5lZCcgJiYgX2J6VDY3UndUaFE1cHg1dFYgIT09IG51bGwpIHsKICAgICAgICB2YXIgX2pobkg1Q0Y2M1Zuakh6UVIgPSBKU09OLnBhcnNlKF9ielQ2N1J3VGhRNXB4NXRWKTsKICAgICAgICB2YXIgXzRSYnhCV3o3a0Y0TWhwTnYgPSBNYXRoLnJvdW5kKCtuZXcgRGF0ZSgpLzEwMDApOwogICAgICAgIGlmIChfamhuSDVDRjYzVm5qSHpRUi5jcmVhdGVkX2F0ICsgd2luZG93Ll9jamNDMzU2ZzZUWlkxajlKLnR0bCA8IF80UmJ4Qld6N2tGNE1ocE52KSB7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdzdWJJZCcpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgndG9rZW4nKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOwogICAgICAgIH0KICAgIH0KICAgIHZhciBfeXdSd0szY1RIV00zWXNXdiA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOwogICAgdmFyIF9LY0tEWnJGR0hETVhuYmJzID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7CiAgICB2YXIgX2MyTlI3ekR4M254aDl3SGogPSAnP3JldHVybj1qcy5jbGllbnQnOwogICAgICAgIF9jMk5SN3pEeDNueGg5d0hqICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOwogICAgICAgIF9jMk5SN3pEeDNueGg5d0hqICs9ICcmc2VfcmVmZXJyZXI9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5yZWZlcnJlcik7CiAgICAgICAgX2MyTlI3ekR4M254aDl3SGogKz0gJyZkZWZhdWx0X2tleXdvcmQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC50aXRsZSk7CiAgICAgICAgX2MyTlI3ekR4M254aDl3SGogKz0gJyZsYW5kaW5nX3VybD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmxvY2F0aW9uLmhvc3RuYW1lICsgZG9jdW1lbnQubG9jYXRpb24ucGF0aG5hbWUpOwogICAgICAgIF9jMk5SN3pEeDNueGg5d0hqICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOwogICAgaWYgKHR5cGVvZiBfeXdSd0szY1RIV00zWXNXdiAhPT0gJ3VuZGVmaW5lZCcgJiYgX3l3UndLM2NUSFdNM1lzV3YgJiYgd2luZG93Ll9jamNDMzU2ZzZUWlkxajlKLnVuaXF1ZSkgewogICAgICAgIF9jMk5SN3pEeDNueGg5d0hqICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoX3l3UndLM2NUSFdNM1lzV3YpOwogICAgfQogICAgaWYgKHR5cGVvZiBfS2NLRFpyRkdIRE1YbmJicyAhPT0gJ3VuZGVmaW5lZCcgJiYgX0tjS0RackZHSERNWG5iYnMgJiYgd2luZG93Ll9jamNDMzU2ZzZUWlkxajlKLnVuaXF1ZSkgewogICAgICAgIF9jMk5SN3pEeDNueGg5d0hqICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfS2NLRFpyRkdIRE1YbmJicyk7CiAgICB9CiAgICB2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsKICAgICAgICBhLnNyYyA9IHdpbmRvdy5fY2pjQzM1Nmc2VFpZMWo5Si5SX1BBVEggKyBfYzJOUjd6RHgzbnhoOXdIajsKICAgIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOwogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQogICAgfSkoKTsKICAgIA=="></script>
 
-<!-- This site is optimized with the Yoast SEO plugin v3.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
-<link rel="canonical" href="pl/index.html" />
-<meta property="og:locale" content="pl_PL" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Home - Restauracja Tradycyja" />
-<meta property="og:url" content="http://tradycyja.pl/" />
-<meta property="og:site_name" content="Restauracja Tradycyja" />
-<meta property="og:image" content="http://tradycyja.pl/wp-content/uploads/2016/11/slider-home.jpg" />
-<meta property="og:image:width" content="1920" />
-<meta property="og:image:height" content="700" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Home - Restauracja Tradycyja" />
-<meta name="twitter:image" content="http://tradycyja.pl/wp-content/uploads/2016/11/slider-home.jpg" />
-<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","url":"http:\/\/tradycyja.pl\/","name":"Restauracja Tradycyja","potentialAction":{"@type":"SearchAction","target":"http:\/\/tradycyja.pl\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<!-- / Yoast SEO plugin. -->
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Cocina Latinoaméricana del Mar - Agua & Sal</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<link rel="alternate" type="application/rss+xml" title="Restauracja Tradycyja &raquo; Kanał z wpisami" href="feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title="Restauracja Tradycyja &raquo; Kanał z komentarzami" href="comments/feed/index.html" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/tradycyja.pl\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel='stylesheet' id='wl-wrgf-swipe-css-css'  href='wp-content/plugins/responsive-gallery-with-lightbox/lightbox/swipebox/swipebox.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wrgf-hover-pack-css-css'  href='wp-content/plugins/responsive-gallery-with-lightbox/css/hover-pack.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wrgf-boot-strap-css-css'  href='wp-content/plugins/responsive-gallery-with-lightbox/css/bootstrap.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wrgf-img-gallery-css-css'  href='wp-content/plugins/responsive-gallery-with-lightbox/css/img-gallery.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wrgf-font-awesome-4-css'  href='wp-content/plugins/responsive-gallery-with-lightbox/css/font-awesome-latest/css/font-awesome.min.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-css'  href='wp-content/plugins/contact-form-7/includes/css/styles.css@ver=4.5.css' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-ui-theme-css'  href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.min.css?ver=1.11.4' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-ui-timepicker-css'  href='wp-content/plugins/contact-form-7-datepicker/js/jquery-ui-timepicker/jquery-ui-timepicker-addon.min.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='cookie-notice-front-css'  href='wp-content/plugins/cookie-notice/css/front.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wp1s-frontend-style-css'  href='wp-content/plugins/wp-1-slider/css/wp1s-frontend-style.css@ver=1.1.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wp1s-bxslider-style-css'  href='wp-content/plugins/wp-1-slider/css/jquery.bxslider.css@ver=1.1.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wp1s-responsive-style-css'  href='wp-content/plugins/wp-1-slider/css/wp1s-responsive.css@ver=1.1.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='freshmail-style-css'  href='wp-content/plugins/freshmail_for_wordpress/assets/css/style.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='wp-includes/css/dashicons.min.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-jquery-ui-dialog-css'  href='wp-includes/css/jquery-ui-dialog.min.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='unite-bootstrap-css'  href='wp-content/themes/unite/inc/css/bootstrap.min.css@ver=4.5.3.css' type='text/css' media='all' />
-<link rel='stylesheet' id='unite-style-css'  href='wp-content/themes/unite_child/style.css@ver=4.5.3.css' type='text/css' media='all' />
-<script type='text/javascript' src='wp-includes/js/jquery/jquery.js@ver=1.12.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js@ver=1.4.1'></script>
-<script type='text/javascript' src='wp-content/plugins/responsive-gallery-with-lightbox/js/hover-pack.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-content/plugins/responsive-gallery-with-lightbox/lightbox/swipebox/jquery.swipebox.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-content/plugins/responsive-gallery-with-lightbox/js/masonry.pkgd.min.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-content/plugins/responsive-gallery-with-lightbox/js/imagesloaded.pkgd.min.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/core.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/widget.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/mouse.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/button.min.js@ver=1.11.4'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var cnArgs = {"ajaxurl":"http:\/\/tradycyja.pl\/wp-admin\/admin-ajax.php","hideEffect":"slide","onScroll":"no","onScrollOffset":"100","cookieName":"cookie_notice_accepted","cookieValue":"TRUE","cookieTime":"2592000","cookiePath":"\/","cookieDomain":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/cookie-notice/js/front.js@ver=1.2.36.1'></script>
-<script type='text/javascript' src='wp-content/plugins/wp-1-slider/js/jquery.fitvids.js@ver=1.1.1'></script>
-<script type='text/javascript' src='wp-content/plugins/wp-1-slider/js/jquery.bxslider.min.js@ver=1.1.1'></script>
-<script type='text/javascript' src='wp-content/plugins/wp-1-slider/js/wp1s-frontend-script.js@ver=1.1.1'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/resizable.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/draggable.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/position.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/dialog.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/tooltip.min.js@ver=1.11.4'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var static_var = {"plugin_url":"http:\/\/tradycyja.pl\/wp-content\/plugins\/freshmail_for_wordpress","ajax":"http:\/\/tradycyja.pl\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/freshmail_for_wordpress/assets/js/user.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-content/themes/unite/inc/js/bootstrap.min.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-content/themes/unite/inc/js/main.min.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-content/themes/unite_child/js/scripts.js@ver=4.5.3'></script>
-<link rel='https://api.w.org/' href='wp-json/index.html' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php@rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.5.3" />
-<link rel='shortlink' href='pl/index.html' />
-<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed@url=http%253A%252F%252Ftradycyja.pl%252F" />
-<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed@url=http%253A%252F%252Ftradycyja.pl%252F&amp;format=xml" />
-<style type="text/css">
-.qtranxs_flag_pl {background-image: url(wp-content/plugins/qtranslate-x/flags/pl.png); background-repeat: no-repeat;}
-.qtranxs_flag_en {background-image: url(wp-content/plugins/qtranslate-x/flags/gb.png); background-repeat: no-repeat;}
-</style>
-<link hreflang="pl" href="pl/index.html" rel="alternate" />
-<link hreflang="en" href="en/index.html" rel="alternate" />
-<link hreflang="x-default" href="pl/index.html" rel="alternate" />
-<meta name="generator" content="qTranslate-X 3.4.6.8" />
-<style type="text/css"></style><link rel="icon" href="wp-content/uploads/2017/02/favicon.png" sizes="32x32" />
-<link rel="icon" href="wp-content/uploads/2017/02/favicon.png" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="wp-content/uploads/2017/02/favicon.png" />
-<meta name="msapplication-TileImage" content="http://tradycyja.pl/wp-content/uploads/2017/02/favicon.png" />
-<!-- FRESHMAIL POPUPS JAVASCRIPT DO NOT MODIFY --><!-- END FRESHMAIL POPUPS JAVASCRIPT CODE -->    <script src="https://use.fontawesome.com/295f762f05.js"></script>
-    <script>
-        var j = jQuery.noConflict();
-        j(document).ready(function () {
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-            /* ----------------- map ap -------------------- */
-            function initialize() {
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/ays-gal/ays-icon.png">
 
-                // Create an array of styles.
-                var styles = [
-                    {
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#ebe3cd"
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#523735"
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.text.stroke",
-                        "stylers": [
-                            {
-                                "color": "#f5f1e6"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                            {
-                                "color": "#c9b2a6"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative.land_parcel",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                            {
-                                "color": "#dcd2be"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative.land_parcel",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#ae9e90"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "stylers": [
-                            {
-                                "color": "#bfc696"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#bfc696"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape.man_made",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#bfc696"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape.natural",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#dfd2ae"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape.natural",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#bfc696"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#969a79"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "labels.text",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#93817c"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi.business",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#a5b076"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#447530"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#f5f1e6"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "labels.icon",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#fdfcf8"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#f8c967"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                            {
-                                "color": "#e9bc62"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway.controlled_access",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#e98d58"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway.controlled_access",
-                        "elementType": "geometry.stroke",
-                        "stylers": [
-                            {
-                                "color": "#db8555"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.local",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#806b63"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit.line",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#888888"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit.line",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#8f7d77"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit.line",
-                        "elementType": "labels.text.stroke",
-                        "stylers": [
-                            {
-                                "color": "#ebe3cd"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit.station",
-                        "elementType": "geometry",
-                        "stylers": [
-                            {
-                                "color": "#dfd2ae"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "color": "#b9d3c2"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "color": "#92998d"
-                            }
-                        ]
-                    }
-                ]
-                // Create a new StyledMapType object, passing it the array of styles,
-                // as well as the name to be displayed on the map type control.
-                var styledMap = new google.maps.StyledMapType(styles,
-                    {name: "Styled Map"});
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400|Libre+Baskerville:400,400i,700" rel="stylesheet">
 
-                // Create a map object, and include the MapTypeId to add
-                // to the map type control.
-//                var isDraggable = j(document).width() > 992 ? true : false;
-                var mapOptions = {
-                    zoom: 16,
-                    scrollwheel: false,
-//                    draggable: isDraggable,
-                    draggable: true,
-                    center: new google.maps.LatLng(50.060565, 19.937194),
-                    mapTypeControl: false,
-                    streetViewControl: false,
-                    mapTypeControlOptions: {
-                        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                    }
-                };
-                var map = new google.maps.Map(document.getElementById('map'),
-                    mapOptions);
+    <!-- CSS -->
+    <link rel='stylesheet' href="css/global.css">
+    <link rel='stylesheet' href="css/structure.css">
+    <link rel='stylesheet' href="css/restaurant2.css">
+    <link rel='stylesheet' href="css/bootstrap.min.css">
+    <link rel='stylesheet' href="css/custom.css">
 
-                //Associate the styled map with the MapTypeId and set it to display.
-                map.mapTypes.set('map_style', styledMap);
-                map.setMapTypeId('map_style');
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="plugins/rs-plugin/css/settings.css">
 
-                var image = '/wp-content/themes/unite_child/images/map-icon.png ';
-                var myLatLng = new google.maps.LatLng(50.060565, 19.937194);
-                var beachMarker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    icon: image
-                });
-
-            }
-
-            if (j("#map").length > 0) {
-                google.maps.event.addDomListener(window, 'load', initialize);
-            }
-
-
-        });
-
-
-    </script>
+    <!-- Restorando -->
+    <link href="restorando/restorando.css" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body class="home page page-id-6 page-template page-template-front-page page-template-front-page-php">
-<header id="masthead" class="site-header">
-        <div class="container header-options">
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-5 top-contact">
-                 			<div class="textwidget"><p>Pon-Nd: 12-22:30 <br>
-              <span>12 424 96 16 </span>
-                </p></div>
-		             </div>
-
-            
-                <div id="logo" class="col-md-4 col-sm-3 col-xs-3 logo">
-                    <a href="pl/index.html"><img src="wp-content/uploads/2016/11/logo-2.png"
-                                                                         height="161"
-                                                                         width="242"
-                                                                         alt="Restauracja Tradycyja"/></a>
-                </div>
-
-            
-            <div class="col-md-4 col-sm-5 col-xs-4 social-media">
-                <ul class="social-links">
-                    <li>
-                        <a href="https://pl-pl.facebook.com/Tradycyja/" target="_blank"><i class="fa fa-facebook"
-                                                                                        aria-hidden="true"></i></a>
-                    </li>
-<!--                    <li>-->
-<!--                        <a href="https://www.instagram.com/explore/locations/240271677/" target="_blank"><i-->
-<!--                                class="fa fa-instagram" aria-hidden="true"></i></a>-->
-<!--                    </li>-->
-                    <li>
-                        <a href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d4093579-Reviews-Restauracja_Tradycyja-Krakow_Lesser_Poland_Province_Southern_Poland.html"
-                           target="_blank"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <div class="languages">
-                            <div class="current">
-                                <p>Language: <span></span></p>
-                            </div>
-                            <div class="widget qtranxs_widget">
-<ul class="language-chooser language-chooser-text qtranxs_language_chooser" id="qtranslate--1-chooser">
-<li class="lang-pl active"><a href="pl/index.html" hreflang="pl" title="Polski (pl)" class="qtranxs_text qtranxs_text_pl"><span>Polski</span></a></li>
-<li class="lang-en"><a href="en/index.html" hreflang="en" title="English (en)" class="qtranxs_text qtranxs_text_en"><span>English</span></a></li>
-</ul><div class="qtranxs_widget_end"></div>
-</div>                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-menu" class="nav navbar-nav"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a title="Menu" href="pl/menu/index.html">Menu</a></li>
-<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a title="O nas" href="pl/o-nas/index.html">O nas</a></li>
-<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a title="Wnętrza" href="pl/wnetrza/index.html">Wnętrza</a></li>
-<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a title="Aktualności" href="pl/aktualnosci/index.html">Aktualności</a></li>
-<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a title="Organizacja imprez" href="pl/organizacja-imprez/index.html">Organizacja imprez</a></li>
-<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a title="Kontakt i rezerwacje" href="pl/kontakt-i-rezerwacje/index.html">Kontakt i rezerwacje</a></li>
-<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53"><a title="&lt;i class=&quot;fa fa-facebook&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;" href="https://pl-pl.facebook.com/Tradycyja/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a title="&lt;i class=&quot;fa fa-tripadvisor&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;" href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d4093579-Reviews-Restauracja_Tradycyja-Krakow_Lesser_Poland_Province_Southern_Poland.html"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a></li>
-<li id="menu-item-56" class="qtranxs-lang-menu qtranxs-lang-menu-pl menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56 dropdown"><a title="Język" href="pl/index.html#" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon Polski"></span>&nbsp;Język <span class="caret"></span></a>
-<ul role="menu" class=" dropdown-menu">
-	<li id="menu-item-57" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-pl menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a title="Polski" href="pl/index.html"><span class="glyphicon Polski"></span>&nbsp;Polski</a></li>
-	<li id="menu-item-58" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-58"><a title="English" href="en/index.html"><span class="glyphicon English"></span>&nbsp;English</a></li>
-</ul>
-</li>
-</ul></div>            </div>
-        </div>
-    </nav>
-</header>
-
-<div id="content" class="site-content container-fluid">
-    <section id="homepage" class="homepage">
-        <div class="container-fluid">
-            <!--Banner na stronie glownej-->
-            <header class="static-header" style="background-image: url('wp-content/uploads/2016/11/slider-home.jpg');">
-                <div class="container">
-                    <div class="inner">
-                                                <h1 class="decoration-white">Z szacunku dla tradycji, <br/>z miłości do jedzenia</h1>
-                                            </div>
-                </div>
-            </header>
-
-            <!--sekcja szef rekomenduje-->
-            <section class="chef-recommends">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="green-box decoration-box-light">
-                                <div class="box-img" style="background-image: url('wp-content/uploads/2016/11/slider-nav-hover.jpg')"></div>
-                                <div class="inner-box">
-                                    <h3>Poznaj naszą tradycję</h3>
-                                    <a href="pl/o-nas/index.html" class="btn btn-lightBrown">Dowiedz się więcej</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 second-box">
-                            <div class="green-box decoration-box-light">
-                                <div class="box-img" style="background-image: url('wp-content/uploads/2016/11/organizacja-imprez-folk.jpg')"></div>
-                                <div class="inner-box">
-                                    <h3>Spotkania z Tradycyją</h3>
-                                    <a href="pl/organizacja-imprez/index.html" class="btn btn-lightBrown">Dowiedz się więcej</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 large-box">
-                            <div class="reservation  ">
-                                <div class="decoration-box-green">
-                                    <h3>Rezerwuj stolik</h3>
-                                    <div class="contact-form">
-                                        <div role="form" class="wpcf7" id="wpcf7-f14-o1" lang="pl-PL" dir="ltr">
-<div class="screen-reader-response"></div>
-<form action="pl/index.html#wpcf7-f14-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="14" />
-<input type="hidden" name="_wpcf7_version" value="4.5" />
-<input type="hidden" name="_wpcf7_locale" value="pl_PL" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f14-o1" />
-<input type="hidden" name="_wpnonce" value="8f4d678036" />
+<body class="home page template-slider color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
+    <div id="Wrapper">
+        <div id="Header_wrapper">
+    <header id="Header">
+        <div class="header_placeholder"></div>
+        <div id="Top_bar">
+            <div class="container">
+                <div class="column one">
+                    <div class="top_bar_left clearfix">
+                        <div class="logo">
+    <a id="logo" href="index.html" title="Agua & Sal - Cebichería"><img class="logo-main scale-with-grid" src="images/restaurant2new.png" alt="Agua & Sal" /><img class="logo-sticky scale-with-grid" src="images/restaurant2new.png" alt="Agua & Sal" /><img class="logo-mobile scale-with-grid" src="images/restaurant2new.png" alt="Agua & Sal" /><img class="logo-mobile-sticky scale-with-grid" src="images/restaurant2new.png" alt="Agua & Sal" />
+    </a>
 </div>
-<p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Imię i nazwisko" /></span> </p>
-<p><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Adres e-mail" /></span></p>
-<p><span class="wpcf7-form-control-wrap your-phone"><input type="tel" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Telefon" /></span></p>
-<p><span class="wpcf7-form-control-wrap date-880"><input type="text" name="date-880" value="" size="40" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-required data" aria-required="true" placeholder="Data" /> </span></p>
-<p><span class="wpcf7-form-control-wrap time-496"><input type="text" name="time-496" value="" size="40" class="wpcf7-form-control wpcf7-date wpcf7-time wpcf7-validates-as-required godzina" aria-required="true" placeholder="Godzina" /> </span></p>
-<p><span class="wpcf7-form-control-wrap number-of-people"><input type="text" name="number-of-people" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required selekt" aria-required="true" aria-invalid="false" placeholder="Liczba osób" /></span> </p>
-<p><input type="submit" value="Rezerwuj" class="wpcf7-form-control wpcf7-submit btn btn-green" /></p>
-<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output wpcf7-display-none"></div></form></div>                                    </div>
-                                    <h4>
-                                        <a href="tel:+48 12 424 96 16">+48 12 424 96 16</a> <br />
-                                        <a href="mailto:rezerwacja@tradycyja.pl">rezerwacja@tradycyja.pl</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chef2">
-                            <h3>Szef kuchni poleca </h3>
-                        </div>
-
-
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="green-box decoration-box-light">
-                                <div class="box-img" style="background-image: url('wp-content/uploads/2016/11/IMG_9117.jpg')"></div>
-                                <div class="inner-box">
-                                    <h3>Degustacja pierogów</h3>
-                                    <a href="pl/menu/index.html" class="btn btn-lightBrown">Dowiedz się więcej</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="green-box decoration-box-light">
-                                <div class="box-img" style="background-image: url('wp-content/uploads/2016/11/front-page-banner.jpg')"></div>
-                                <div class="inner-box">
-                                    <h3>Krem grzybowy w czarce chlebowej</h3>
-                                    <a href="pl/menu/index.html" class="btn btn-lightBrown">Dowiedz się więcej</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="menu-card">
-                <h2 class="decoration-green">Karta dań</h2>
-                <div class="inner">
-                    <a href="index.html@p=15.html" class="btn btn-green">Dowiedz się więcej </a>
-                </div>
-            </section>
-
-    <section class="three-boxes">
-
-        <div class="container">
-            <h2 class="decoration-green">Aktualności</h2>
-            <div class="row">
-                                    <article id="post-462" class="col-md-4 col-sm-6 news-box">
-                        <a href="pl/christmas-eve-dinner-for-companies/index.html">
-                            <div class="box"
-                                 style="background-image: url(wp-content/uploads/2018/11/IMG_1271.jpg);">
-                                <div class="inner">
-                                    <h3 class="decoration-red">Wigilia Firmowa</h3>
-                                    <div class="dec-white"></div>
-                                                                            <p>16.10.19</p>
-                                                                        <button class="btn btn-green">Dowiedz się więcej </button>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                                    <article id="post-449" class="col-md-4 col-sm-6 news-box">
-                        <a href="pl/english-kolacja-sylwestrowa-2019-2020/index.html">
-                            <div class="box"
-                                 style="background-image: url(wp-content/uploads/2019/10/Sylwester-RT-2019-baner.jpg);">
-                                <div class="inner">
-                                    <h3 class="decoration-red">Kolacja sylwestrowa z Tradycyją</h3>
-                                    <div class="dec-white"></div>
-                                                                            <p>16.10.19</p>
-                                                                        <button class="btn btn-green">Dowiedz się więcej </button>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                                    <article id="post-477" class="col-md-4 col-sm-6 news-box">
-                        <a href="pl/lunch-for-35pln/index.html">
-                            <div class="box"
-                                 style="background-image: url(wp-content/uploads/2018/11/Plakat-zestaw-dnia-2018-A4-1.jpg);">
-                                <div class="inner">
-                                    <h3 class="decoration-red">LUNCH ZA 35ZŁ</h3>
-                                    <div class="dec-white"></div>
-                                                                            <p>15.01.19</p>
-                                                                        <button class="btn btn-green">Dowiedz się więcej </button>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-                            </div>
-        </div>
-    </section>
-
-            <section class="newsletter">
-                <div class="container">
-                    <h2 class="decoration-green">Newsletter</h2>
-                    <div class="newsletter-form">
-                        <div style="width:100%;" >
-	<div style="background-color: #d8d8d8;border:0px solid #000000;border-radius:5px; padding: 0px  24px;overflow:hidden;" id="fm_form_2">
-		<div class="form_container">
-			<form method="post" class="form_subscribe freshmail_form_2">
-									<p style="color: #111111; font-size:18pt; text-align:center;" class="text_header">
-											</p>
-												<div style="margin: 0% 0%;">
-									<input type="text" class="field" placeholder="Email" value="" name="form[email]" style="max-width:100%;width:300px; height:44px;color:#998a62;font-size:12pt; border:1px solid #998a62;" />
-								</div>
-							
-				<p style="text-align:center;">
-					<button type="submit" name="form_subscribe_button" class="form_subscribe_button button" style="box-shadow:none;border-radius:0px;width:300px; height:44px;font-size:11pt; color:#f1e9d3;background:#808b2f;border:1px solid #808b2f;">
-						Zapisz się					</button>
-				</p>
-
-				
-				<input type="hidden" value="2" name="fm_form_id" />
-				<input type="hidden" value="fm_form" name="action" />
-				<input type="hidden" value="/" name="fm_form_referer" />
-			</form>
-		</div>
-	</div>
-</div>
-
-<style>
-	.freshmail_dialog .ui-dialog-titlebar-close {
-		background: url(wp-content/plugins/freshmail_for_wordpress/assets/images/close.png);)
-	}
-	.message_error {
-		color:;	}
-	.message_success {
-		color:;	}
-	.form_subscribe_button:hover {
-		background:#f1e9d3 !important; color:#808b2f !important; border-color:#808b2f !important;	}
-</style>	<div>
-		<span style="display: none !important;"><a href="http://freshmail.pl" rel="nofollow" style="display: inline !important;">FreshMail.pl</a></span>
-	</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="slider">
-                <div class="wp1s-slider-wrapper wp1s-slider-wrapper-27554 ">
-    <div class="wp1s-main-wrapper">
-      
-
-    <div class="wp1s-slider-container wp1s-pager-type-2 wp1s-arrow-type-6 wp1s-pagination">
-    <ul class="wp1s-bxslider" data-id="27554" data-auto='true' data-speed='200' data-pause='9000' data-transition='horizontal' data-controls='true' data-responsive='true' data-pager='dot' >
+<div class="menu_wrapper">
+    <nav id="menu">
+        <ul id="menu-main-menu-left" class="menu menu_left">
+            <li  class="current_page_item">
+                <a href="index.html"><span>Inicio</span></a>
+            </li>
             <li >
-<!--            <img src="--><!--" />-->
-            <div class="slide" style="background-image: url('wp-content/uploads/2017/02/tradycyja_0003_IMG_2992.jpg');"></div>
-            <div class="wp1s-caption-wrapper wp1s-caption-type-1 wp1s-caption-middlecenter">
-<!--                <div class="container container-border">-->
-<!--                    <h1 class="wp1s-caption-title">--><!--</h1>-->
-<!--                    <h2 class="wp1s-caption-content">--><!--</h2>-->
-<!--                    --><!--                    <a class="btn btn-white" href="--><!--" class="wps1-readmore-button">--><!--</a>-->
-<!--                    --><!--                </div>-->
-            <div class="container">
-                        <h2 class="decoration-white">Wnętrza</h2>
-<!--                        <h3 class="wp1s-caption-content">--><!--</h3>-->
-                                                    <a class="btn btn-brown" href="wnetrza.1.html">Zobacz galerię</a>
-                        
-            </div>
-            </div>
-        </li>
+                <a href="nosotros.html"><span>Nosotros</span></a>
+            </li>
             <li >
-<!--            <img src="--><!--" />-->
-            <div class="slide" style="background-image: url('wp-content/uploads/2017/02/tradycyja_0004_IMG_2986.jpg');"></div>
-            <div class="wp1s-caption-wrapper wp1s-caption-type-1 wp1s-caption-middlecenter">
-<!--                <div class="container container-border">-->
-<!--                    <h1 class="wp1s-caption-title">--><!--</h1>-->
-<!--                    <h2 class="wp1s-caption-content">--><!--</h2>-->
-<!--                    --><!--                    <a class="btn btn-white" href="--><!--" class="wps1-readmore-button">--><!--</a>-->
-<!--                    --><!--                </div>-->
-            <div class="container">
-                        <h2 class="decoration-white">Wnętrza</h2>
-<!--                        <h3 class="wp1s-caption-content">--><!--</h3>-->
-                                                    <a class="btn btn-brown" href="wnetrza.1.html">Zobacz galerię</a>
-                        
-            </div>
-            </div>
-        </li>
+                <a href="especialidades.html"><span>Especialidades</span></a>
+            </li>
             <li >
-<!--            <img src="--><!--" />-->
-            <div class="slide" style="background-image: url('wp-content/uploads/2016/11/tradycyja_0009_IMG_2088.jpg');"></div>
-            <div class="wp1s-caption-wrapper wp1s-caption-type-1 wp1s-caption-middlecenter">
-<!--                <div class="container container-border">-->
-<!--                    <h1 class="wp1s-caption-title">--><!--</h1>-->
-<!--                    <h2 class="wp1s-caption-content">--><!--</h2>-->
-<!--                    --><!--                    <a class="btn btn-white" href="--><!--" class="wps1-readmore-button">--><!--</a>-->
-<!--                    --><!--                </div>-->
-            <div class="container">
-                        <h2 class="decoration-white">Wnętrza</h2>
-<!--                        <h3 class="wp1s-caption-content">--><!--</h3>-->
-                                                    <a class="btn btn-brown" href="wnetrza.1.html">Zobacz galerię</a>
-                        
-            </div>
-            </div>
-        </li>
+                <a href="menu.html"><span>Menú</span></a>
+            </li>
+            
         </ul>
-    </div>
+        <ul id="menu-main-menu-right" class="menu menu_right">
+            <li >
+                <a href="galeria.html"><span>Galería</span></a>
+            </li>
+            <li >
+                <a href="colaboradores.html"><span>Colaboradores</span></a>
+            </li>
+            <li  >
+                <a href="prensa.html"><span>Prensa</span></a>
+            </li>
+            <li >
+                <a href="contacto.html"><span>Contacto</span></a>
+            </li>
+        </ul>
+    </nav><a class="responsive-menu-toggle " href="index.html#"><i class="icon-menu-fine"></i></a>
 </div>
-      </div>
-
-    
-<style>
-
-.wp1s-slider-wrapper-27554 {
-    
-     width:100%;   
-}
-
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-1 .wp1s-caption-title{
-
-    font-size:20px;
-   
-}
-
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-1 .wp1s-caption-content{
-   
-    font-size: 40px;
-    
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-2 .wp1s-caption-title {
-    font-size:20px;
-    background-color:rgba(125,165,82,0.8);
-   
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-2 .wp1s-caption-content {
-    font-size:40px;
-
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-3 .wp1s-caption-title {
-    font-size:20px;
-    border-bottom:7px solid #2ed1ff;
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-3 .wp1s-caption-content {
-    font-size:40px;
-   
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-4  {
-   
-    background-color:rgba(124,118,118,0.6);
-
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-4 .wp1s-caption-title {
-    font-size:20px;
-
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-4 .wp1s-caption-content {
-    font-size:40px;
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper .wp1s-caption-title {
-    color:#ffffff;
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper .wp1s-caption-content {
-    color:#ffffff;
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-1 .bx-wrapper .bx-pager.bx-default-pager a {
-    background-color:#ffffff;
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-1 .bx-wrapper .bx-pager.bx-default-pager a:hover, 
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-1 .bx-wrapper .bx-pager.bx-default-pager a.active {
-    background-color:#3bb1f4;
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-2 .bx-wrapper .bx-pager.bx-default-pager a {
-    background-color:#635e5e;
-    border:3px solid #979191;
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-2 .bx-wrapper .bx-pager.bx-default-pager a:hover, 
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-2 .bx-wrapper .bx-pager.bx-default-pager a.active {
-    background-color:#ffffff;
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-3 .bx-wrapper .bx-pager.bx-default-pager a {
-    border:1px solid #ffffff;
-   
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-3 .bx-wrapper .bx-pager.bx-default-pager a:hover, 
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-3 .bx-wrapper .bx-pager.bx-default-pager a.active {
-    border-color:#ff9600;
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-4 .bx-wrapper .bx-pager.bx-default-pager a {
-    background-color:#7a7a7a;
-    
-}
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-4 .bx-wrapper .bx-pager.bx-default-pager a:hover, 
-.wp1s-slider-wrapper-27554 .wp1s-main-wrapper .wp1s-pager-type-4 .bx-wrapper .bx-pager.bx-default-pager a.active {
-    background-color:#ffffff;
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-1 .wps1-readmore-button {
-    background-color: #078f8a;
-    box-shadow: 0 2px 0 #056460;
-    -webkit-box-shadow: 0 2px 0 #056460;
-    -moz-box-shadow: 0 2px 0 #056460;
-}
-.wp1s-slider-wrapper-27554 .wp1s-caption-wrapper.wp1s-caption-type-1 .wps1-readmore-button:hover {
-    background-color:#08a39d;
-}
-@media (max-width:1200px) {
-.wp1s-slider-wrapper-27554 .wp1s-slider-wrapper {
-width:100%;
-}
-}
-.wp1s-widget-wrap .wp1s-caption-wrapper {
-
-display: none;
-}
-
-.wp1s-widget-wrap .wp1s-thumbnail-wrapper {
-display: none;
-}
-
-</style>            </section>
-        </div>
-    </section>
-
-</div>
-<footer class="site-footer container-fluid" role="contentinfo">
-    
-    <div class="container footer-bg">
-        <a href="pl/index.html" class="footer-logo"></a>
-    </div>
-
-    <div class="footer-links container">
-        <div class="row">
-
-            <div class="col-sm-12 footer-area footer-menu">
-                <div class="menu-menu-container"><ul id="menu-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="pl/menu/index.html">Menu</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="pl/o-nas/index.html">O nas</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="pl/wnetrza/index.html">Wnętrza</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="pl/aktualnosci/index.html">Aktualności</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="pl/organizacja-imprez/index.html">Organizacja imprez</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="pl/kontakt-i-rezerwacje/index.html">Kontakt i rezerwacje</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53"><a href="https://pl-pl.facebook.com/Tradycyja/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d4093579-Reviews-Restauracja_Tradycyja-Krakow_Lesser_Poland_Province_Southern_Poland.html"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a></li>
-<li class="qtranxs-lang-menu qtranxs-lang-menu-pl menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56"><a title="Polski" href="pl/index.html#">Język</a>
-<ul class="sub-menu">
-	<li class="qtranxs-lang-menu-item qtranxs-lang-menu-item-pl menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a title="Polski" href="pl/index.html">Polski</a></li>
-	<li class="qtranxs-lang-menu-item qtranxs-lang-menu-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-58"><a title="English" href="en/index.html">English</a></li>
-</ul>
-</li>
-</ul></div>            </div>
-
-            <div class="footer-area see-also">
-                                    <aside id="enhancedtextwidget-7" class="widget widget_text enhanced-text-widget"><h3 class="footer-title">Zobacz także</h3><div class="textwidget widget-text"><a href="http://wierzynek.pl/" target="_blank">
-<img src="wp-content/themes/unite_child/images/wierzynek-logotype.png" alt="Wierzynek" />
-</a>
-<a href="http://www.slodkiwierzynek.pl/" target="_blank">
-<img src="wp-content/themes/unite_child/images/sweet-wierzynek-logotype.png" alt="Słodki wierzynek" />
-</a>
-<a href="http://www.grandegrill.pl/" target="_blank">
-<img src="wp-content/themes/unite_child/images/grandegrill-logotype.png" alt="Słodki wierzynek" />
-</a></div></aside>                
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="mfn-main-slider" id="mfn-rev-slider">
+            <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+                <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.1.5">
+                    <ul>
+                        <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <img src="images/ays-gal/slide-001.jpg" alt="" title="home_restaurant2_slider_slide1" width="1920" height="820" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        </li>
+                        <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <img src="images/ays-gal/slide-002.jpg" alt="" title="home_restaurant2_slider_slide2" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        </li>
+                        <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <img src="images/ays-gal/slide-003.jpg" alt="" title="home_restaurant2_slider_slide3" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        </li>
+                    </ul>
+                    <div class="tp-static-layers">
+                        <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-5" data-x="center" data-hoffset="" data-y="center" data-voffset="-120" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":200,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 40px; line-height: 30px; font-weight: 700; color: rgba(255, 255, 255, 1.00);text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.61); letter-spacing: 6px;">
+                            AGUA &amp; SAL
+                        </div>
+                        <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 40px; line-height: 58px; font-weight: 400; color: rgba(255, 255, 255, 1.00);text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.61); text-align: center">
+                            COCINA LATINOAMÉRICANA DEL MAR
+                            <br /> El cebiche es la unión mágica marcada
+                            <br /> por la simpleza y la frescura.
+                        </div>
+                    </div>
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div id="Content">
+    <div class="content_wrapper clearfix">
+        <div class="sections_group">
+            <div class="entry-content">
+                <div class="section mcb-section no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:0px; background-image:url(/images/home_restaurant2_sectionbg2.jpg; background-repeat:no-repeat; background-position:center top;">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one-second  valign-top clearfix" style="margin-top:-60px">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_image ">
+                                    <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                                        <div class="image_wrapper"><img class="scale-with-grid" src="images/ays-gal/pic-001.jpg" alt="Agua & Sal" width="780" height="1200" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:90px 5% 90px 10%">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_column  column-margin-20px">
+                                    <div class="column_attr clearfix">
+                                        <h3>Hemos
+                                            <br />
+                                            conquistado el paladar de nuestros clientes</h3>
+                                        <hr class="no_line" style="margin: 0 auto 15px">
+                                        <h6>Pocos platillos simbolizan tan bien el arte y sencillez de la gastronomía Latinoaméricana como el cebiche.</h6>
+                                    </div>
+                                </div>
+                                <div class="column mcb-column one column_button">
+                                    <a class="button  button_size_2 button_theme button_js" href="nosotros.html"><span class="button_label">ACERCA DE NOSOTROS</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section mcb-section full-width no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:0px;">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one-third  valign-top clearfix" style="padding:60px 50px 80px">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_image ">
+                                    <div class="image_frame image_item no_link scale-with-grid alignright no_border">
+                                        <div class="image_wrapper"><img class="scale-with-grid" src="images/ays-gal/ays-sello.png" alt="Agua & Sal" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mcb-wrap two-third  valign-top clearfix" style="margin-top:-60px">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_image ">
+                                    <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                                        <div class="image_wrapper"><img class="scale-with-grid" src="images/ays-gal/cebiche-peruano.jpg" alt="Agua & Sal" width="1280" height="840" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section mcb-section no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:260px; background-image:url('images/ays-gal/home-bg-001.jpg'); background-repeat:no-repeat; background-position:center top; background-size: 100%">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one-second  column-margin-0px valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_placeholder">
+                                    <div class="placeholder">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:70px 60px; background-color:#042630; margin-top:-60px">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_column ">
+                                    <div class="column_attr clearfix">
+                                        <h3 style="color: #fff;">Sugerencias del Mes</h3>
+                                        <hr class="no_line" style="margin: 0 auto 15px">
+                                        <h5 style="color: #fff; position: relative; padding-right: 50px;">CEBICHE PERUANO<span style="position: absolute; top: 0; right: 0;">$165</span></h5>
+                                        <p style="color: #fff;">
+                                            Pesca del día (150 grs) en leche de tigre clásica, chile habanero, cebolla morada y cilantro acompañado de choclo, cancha y camote con un toque de sal rosada de los Andes peruanos.
+                                        </p>
+                                        <hr class="no_line" style="margin: 0 auto 15px">
+                                        <h5 style="color: #fff; position: relative; padding-right: 50px;">CEBICHE A LA LEÑA<span style="position: absolute; top: 0; right: 0;">$175</span></h5>
+                                        <p style="color: #fff;">
+                                            Pesca del día y camarón (150 grs) en salsa de chile rayado, cebolla morada, cilantro y chile cuaresmeño acompañado de esquites asados con un toque de sal ahumada de Alderwood.
+                                        </p>
+                                        <hr class="no_line" style="margin: 0 auto 15px">
+                                        <h5 style="color: #fff; position: relative; padding-right: 50px;">CEBICHE TATEMADO<span style="position: absolute; top: 0; right: 0;">$175</span></h5>
+                                        <p style="color: #fff;">
+                                            Pesca del día, camarón y pulpo (150 grs) en salsa de chile chilhuacle tatemado, yuzu, cebolla cambray, aguacate y rábano sandia con un toque de sal negra de Hawái.
+                                        </p>
+                                        <hr class="no_line" style="margin: 0 auto 15px">
+                                        <h5 style="color: #fff; position: relative; padding-right: 50px;">ESQUITES CON CAMARONES<span style="position: absolute; top: 0; right: 0;">$165</span></h5>
+                                        <p style="color: #fff;">
+                                            Camarón, mayonesa, epazote, queso Cotija, chile piquín y un toque de limón.
+                                        </p>
+                                        <hr class="no_line" style="margin: 0 auto 15px">
+                                        <h5 style="color: #fff; position: relative; padding-right: 50px;">TRUCHA CON MISO<span style="position: absolute; top: 0; right: 0;">$265</span></h5>
+                                        <p style="color: #fff;">
+                                            Filete de trucha salmonada (200 grs) en salsa de miso, teriyaki y jengibre acompañado de puré de papa, zanahoria y bok choy.
+                                        </p>
+                                        <hr class="no_line" style="margin: 0 auto 30px;" />
+                                        <a class="button  button_full_width button_size_2 button_stroke_custom button_js" href="menu.html" style=" border-color:#fff !important; color:#fff;"><span class="button_label">VER MENU</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="section mcb-section no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:260px;">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one  column-margin-0px valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one-third column_placeholder">
+                                    <div class="column_attr clearfix align_center" style="text-align: center; padding-top: 20px;">
+                                        <img src="images/ays-gal/ays-sello.png">
+                                    </div>
+                                </div>
+                                <div class="column mcb-column two-third column_placeholder">
+                                    <div class="column_attr clearfix align_center">
+                                        <h4>En Agua y Sal tenemos el compromiso de servir los mejores pescados y mariscos, respetando las vedas, apoyando siempre la práctica de la pesca sostenible y la conservación del océano.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- dd -->
+                <div class="section mcb-section no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:280px; background-image:url('images/ays-gal/pic-002.jpg'); background-repeat:no-repeat; background-position:left bottom;">
+                    <div class="section_wrapper mcb-section-inner">
+                        <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:70px 60px; background-color:#fff; margin-top:-60px">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_column ">
+                                    <div class="column_attr clearfix align_center">
+                                        <h6 style="letter-spacing: 4px;">AGUA & SAL</h6>
+                                        <hr class="no_line" style="margin: 0 auto 15px">
+                                        <h4>Elaboramos una carta auténtica con sabores inimaginables, con productos de la mejor y mas alta calidad, siempre cuidando y respetando el sabor de la tradicional gastronomía latinoamericana.</h4>
+                                        <hr class="no_line" style="margin: 0 auto 20px;" />
+                                        <h5 style="border-top: 1px solid #b2b2b2; border-bottom: 1px solid #b2b2b2; padding: 10px 0;">Lunes a Sábado de 12 pm a 10 pm<br/>
+                                Domingos de 12 pm a 6 pm</h5>
+                                        <hr class="no_line" style="margin: 0 auto 30px;" />
+                                        <a class="button  button_size_2 button_theme button_js" href="contacto.html"><span class="button_label">Contáctenos</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap mcb-wrap one-second  valign-top clearfix">
+                            <div class="mcb-wrap-inner">
+                                <div class="column mcb-column one column_image ">
+                                    <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                                        <div class="image_wrapper"><img class="scale-with-grid" src="images/ays-gal/pic-003.jpg" alt="Agua & Sal" width="780" height="1000" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
+            </div>
         </div>
     </div>
-</footer>
+</div>
+        <footer id="Footer" class="clearfix">
+            <div class="widgets_wrapper" style="padding:120px 0 105px;">
+                <div class="container">
+                    <div class="column one-fourth">
+                        <aside id="text-3" class="widget widget_text">
+                            <div class="textwidget">
+                                <div class="foot-p" style="text-align: center">
+                                    <h4>Contacto</h4>
+                                    <div style="width: 30%; height: 1px; background: #b2b2b2; margin: 0 auto"></div>
+                                    <hr class="no_line" style="margin: 0 auto 15px">
+                                    <p>
+                                        <strong>Agua y Sal</strong> es una Cebichería de cocina latinoaméricana que rinde un homenaje a los pueblos de pescadores de México, Centro, Sudamérica y el Caribe, con una selección de los mejores platillos de sus costas...
+                                    </p>
+                                    <p style="margin-bottom: 0px;">
+                                        Teléfonos
+                                        <br/>+52(55)52822746 - +52(55)52809520
+                                    </p>
+                                    <p style="word-wrap: break-word;">
+                                        <a href="mailto:contacto@aguaysal.com.mx">contacto@aguaysal.com.mx</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="column one-fourth">
+                        <aside id="text-2" class="widget widget_text">
+                            <div class="textwidget">
+                                <div class="foot-p" style="text-align: center">
+                                    <h4>Ubicación</h4>
+                                    <div style="width: 30%; height: 1px; background: #b2b2b2; margin: 0 auto"></div>
+                                    <hr class="no_line" style="margin: 0 auto 15px">
+                                    <p>
+                                        <strong>Agua & Sal | Cebichería</strong><br/>
+                                        Campos Elíseos 199-A<br/>
+                                        Polanco C.P. 11560<br/>
+                                        Delegación Miguel Hidalgo, <br/>
+                                        Ciudad de México
+                                    </p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="column one-fourth">
+                        <aside id="text-4" class="widget widget_text">
+                            <div class="textwidget">
+                                <div class="foot-p" style="text-align: center;">
+                                    <h4>Horario de Servicio</h4>
+                                    <div style="width: 30%; height: 1px; background: #b2b2b2; margin: 0 auto"></div>
+                                    <hr class="no_line" style="margin: 0 auto 15px">
+                                    <p>
+                                        <strong>Lunes a Sábado de</strong><br/>
+                                        12:00 a 22:00 hrs.<br/>
+                                        <strong>Domingo de</strong><br/> 
+                                        12:00 a 18:00 hrs.
+                                    </p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="column one-fourth">
+                        <aside id="text-4" class="widget widget_text">
+                            <div class="textwidget">
+                                <div class="foot-p" style="text-align: center;">
+                                    <h4>Redes Sociales</h4>
+                                    <div style="width: 30%; height: 1px; background: #b2b2b2; margin: 0 auto"></div>
+                                    <hr class="no_line" style="margin: 0 auto 15px">
+                                    <a target="_blank" href="https://www.facebook.com/aguaysaldf" class="icon_bar icon_bar_facebook icon_bar_small" target="_blank">
+                                        <span class="t"><i class="icon-facebook"></i></span><span class="b"><i class="icon-facebook"></i></span>
+                                    </a>
+                                    <a target="_blank" href="https://plus.google.com/111013423096037332823/about" class="icon_bar icon_bar_google icon_bar_small" target="_blank">
+                                        <span class="t"><i class="icon-google"></i></span><span class="b"><i class="icon-google"></i></span>
+                                    </a>
+                                    <a target="_blank" href="https://twitter.com/aguaysaldf" class="icon_bar icon_bar_twitter icon_bar_small">
+                                        <span class="t"><i class="icon-twitter"></i></span><span class="b"><i class="icon-twitter"></i></span>
+                                    </a>
+                                    <br/>
+                                    <a target="_blank" href="https://es.pinterest.com/aguaysaldf/" class="icon_bar icon_bar_pinterest icon_bar_small">
+                                        <span class="t"><i class="icon-pinterest"></i></span><span class="b"><i class="icon-pinterest"></i></span>
+                                    </a>
+                                    <a target="_blank" href="https://instagram.com/aguaysaldf/" class="icon_bar icon_bar_instagram icon_bar_small">
+                                        <span class="t"><i class="icon-instagram"></i></span><span class="b"><i class="icon-instagram"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copy">
+                <div class="container">
+                    <div class="column one">
+                        <div class="copyright" style="font-size: 12px;">
+                            &copy; 2020 Agua & Sal | Cebichería - Designed by <a target="_blank" href="http://warptech.mx">warptech.mx</a>
+                        </div>
+                        <ul class="social"></ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div><a href="index.html#restorandoModal" class="tab_reservas portfolio-link" data-toggle="modal">RESERVAS</a></div>
+    <!-- Side Menu -->
+    <div id="Side_slide" class="right dark">
+        <div class="close-wrapper">
+            <a href="index.html#" class="close"><i class="icon-cancel-fine"></i></a>
+        </div>
+        <div class="menu_wrapper"></div>
+    </div>
+    <div id="body_overlay"></div>
+    <!-- Restorando Modal -->
+        <div class="portfolio-modal modal fade" id="restorandoModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <script type='text/javascript' src='http://www.opentable.com.mx/widget/reservation/loader?rid=191974&amp;domain=commx&amp;type=standard&amp;theme=standard&amp;lang=en-US&amp;overlay=false&amp;iframe=true'></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- pop up -->
+    <!--
+    <div id="popup-1" class="popup-content">
+        <div class="popup-inner">
+            <div style="margin: auto; width: 240px;">
+                <restorando-widget restaurant-id="8611" type="vertical" width="240" height="405" />
+                <script type="text/javascript" src="http://widgets.restorando.com/reservation-widget.js"></script>
+            </div>
+        </div>
+    </div> -->
+    <!-- end pop up -->
+    <!-- JS -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
 
-<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js@ver=3.51.0-2014.06.20'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/tradycyja.pl\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ..."};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts.js@ver=4.5'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/datepicker.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/datepicker-pl.min.js?ver=1.11.4'></script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7-datepicker/js/jquery-ui-timepicker/jquery-ui-timepicker-addon.min.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7-datepicker/js/jquery-ui-timepicker/i18n/jquery-ui-timepicker-pl.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/ui/slider.min.js@ver=1.11.4'></script>
-<script type='text/javascript' src='wp-content/plugins/contact-form-7-datepicker/js/jquery-ui-sliderAccess.js@ver=4.5.3'></script>
-<script type='text/javascript' src='wp-includes/js/wp-embed.min.js@ver=4.5.3'></script>
+    <script src="js/mfn.menu.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/animations/animations.js"></script>
+    <script src="js/translate3d.js"></script>
+    <script src="js/scripts.js"></script>
 
-<script type="text/javascript">
-jQuery(function($){
-	$('input[name="date-880"]').datepicker({"dateFormat":"dd.mm.yy","controlType":"slider","addSliderAccess":true,"sliderAccessArgs":{"touchonly":true},"stepHour":1,"stepMinute":1,"stepSecond":1,"minDate":"today"}).datepicker('option', $.datepicker.regional['pl']).datepicker('option', 'minDate', "today").datepicker('option', 'maxDate', "").datepicker('refresh');
-});
-</script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
-<script type="text/javascript">
-jQuery(function($){
-	$('input[name="time-496"]').timepicker({"timeFormat":"HH:mm","addSliderAccess":true,"sliderAccessArgs":{"touchonly":true},"hourMin":13,"hourMax":23}).timepicker('option', $.datepicker.regional['pl']).timepicker('refresh');
-});
-</script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
 
-			<div id="cookie-notice" class="cn-bottom" style="color: #fff; background-color: #000;"><div class="cookie-notice-container"><span id="cn-notice-text">Używamy cookies w celach funkcjonalnych, aby ułatwić użytkownikom korzystanie z witryny oraz w celu tworzenia anonimowych statystyk serwisu. Jeżeli nie blokujesz plików cookies, to zgadzasz się na ich używanie oraz zapisanie w pamięci urządzenia. Możesz samodzielnie zarządzać cookies zmieniając odpowiednio ustawienia Twojej przeglądarki</span><a href="pl/index.html#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie button">Ok</a>
-				</div>
-			</div>
+    <script type="text/javascript">
+        var tpj = jQuery;
+        var revapi1;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 4000,
+                    navigation: {
+                        onHoverStop: "off",
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1080,
+                    gridheight: 800,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner2",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        });
+        /*]]>*/
+    </script>
+    <script id="mfn-dnmc-retina-js">
+        jQuery(window).load(function() {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img.logo-main");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "/images/retina-restaurant2new.png").width(retinaLogoW).height(retinaLogoH);
+                var stickyEl = jQuery("#logo img.logo-sticky");
+                var stickyLogoW = stickyEl.width();
+                var stickyLogoH = stickyEl.height();
+                stickyEl.attr("src", "/images/retina-restaurant2new.png").width(stickyLogoW).height(stickyLogoH);
+                var mobileEl = jQuery("#logo img.logo-mobile");
+                var mobileLogoW = mobileEl.width();
+                var mobileLogoH = mobileEl.height();
+                mobileEl.attr("src", "/images/retina-restaurant2new.png").width(mobileLogoW).height(mobileLogoH);
+                var mobileStickyEl = jQuery("#logo img.logo-mobile-sticky");
+                var mobileStickyLogoW = mobileStickyEl.width();
+                var mobileStickyLogoH = mobileStickyEl.height();
+                mobileStickyEl.attr("src", "/images/retina-restaurant2new.png").width(mobileStickyLogoW).height(mobileStickyLogoH);
+            }
+        });
+    </script>
+    <!-- Restorando -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-54538206-5', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
+
 </html>
